@@ -1,0 +1,2192 @@
+{
+"formats": [
+{
+"childTypeLimit": [
+"G_Image",
+"G_Note",
+"G_Page"
+],
+"childtype": "G_Page",
+"fields": [
+{
+"fieldname": "Name",
+"fieldtype": "Text"
+}
+],
+"formathtml": true,
+"formatname": "C_Journal",
+"icon": "book_3",
+"outputlines": [
+""
+],
+"titleline": "{*Name*}"
+},
+{
+"childTypeLimit": [
+"C_Journal",
+"G_Page"
+],
+"childtype": "C_Journal",
+"fields": [
+{
+"fieldname": "Element_Data",
+"fieldtype": "Text"
+}
+],
+"formathtml": true,
+"formatname": "C_Journals",
+"icon": "book_1",
+"outputlines": [
+""
+],
+"titleline": "{*Element_Data*}"
+},
+{
+"childTypeLimit": [
+"G_Note",
+"S_Dice",
+"S_Wafer"
+],
+"childtype": "S_Wafer",
+"fields": [
+{
+"fieldname": "Name",
+"fieldtype": "Text"
+}
+],
+"formathtml": true,
+"formatname": "C_Sample_family",
+"icon": "book_2",
+"outputlines": [
+"<b>{*Name*}</b>",
+"<b>{*#Level1*}</b> samples,",
+"<b>{*#Level2*}</b> processeses logged"
+],
+"titleline": "{*Name*}"
+},
+{
+"childtype": "C_Sample_family",
+"fields": [
+{
+"fieldname": "Name",
+"fieldtype": "Text"
+}
+],
+"formathtml": true,
+"formatname": "C_Samples",
+"icon": "book_1",
+"outputlines": [
+"File: {*!File_Path*}\\{*!File_Name*}",
+"File Size: {*!File_Size*} bytes",
+"File Modified: {*!File_Mod_Date*} {*!File_Mod_Time*}",
+"<b>{*#Level2*} </b> samples in <b>{*#Level1*}</b> families,",
+"<b>{*#Level3*}</b> processes logged"
+],
+"titleline": "{*Name*}"
+},
+{
+"fields": [
+{
+"fieldname": "BAKMaterial",
+"fieldtype": "Text"
+},
+{
+"fieldname": "BAKThickness",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "BAKRate",
+"fieldtype": "Number",
+"format": "#.##"
+}
+],
+"formathtml": true,
+"formatname": "D_BAK640Metal",
+"outputlines": [
+"Material:{*BAKMaterial*}",
+"t(nm):{*BAKThickness*}",
+"rate (nm/s):{*BAKRate*}"
+],
+"spacebetween": false,
+"tables": true,
+"titleline": "{*BAKMaterial*}"
+},
+{
+"fields": [
+{
+"fieldname": "BAKMaterial",
+"fieldtype": "Text"
+},
+{
+"fieldname": "BAKThickness",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "BAKRate",
+"fieldtype": "Number",
+"format": "#.##"
+}
+],
+"formathtml": true,
+"formatname": "D_BAK640Other",
+"generic": "D_BAK640Metal",
+"icon": "bullet_2",
+"outputlines": [
+"Material:{*BAKMaterial*}",
+"t(nm):{*BAKThickness*}",
+"rate (nm/s):{*BAKRate*}"
+],
+"spacebetween": false,
+"tables": true,
+"titleline": "{*BAKMaterial*}"
+},
+{
+"fields": [
+{
+"fieldname": "BAKMaterial",
+"fieldtype": "Text"
+},
+{
+"fieldname": "BAKThickness",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "BAKRate",
+"fieldtype": "Number",
+"format": "#.##"
+}
+],
+"formathtml": true,
+"formatname": "D_BAK640Oxide",
+"generic": "D_BAK640Metal",
+"icon": "bullet_1",
+"outputlines": [
+"Material:{*BAKMaterial*}",
+"t(nm):{*BAKThickness*}",
+"rate (nm/s):{*BAKRate*}"
+],
+"spacebetween": false,
+"tables": true,
+"titleline": "{*BAKMaterial*}"
+},
+{
+"fields": [
+{
+"evalhtml": true,
+"fieldname": "material",
+"fieldtype": "Choice",
+"format": "Ti/Pt"
+},
+{
+"fieldname": "time",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "CH",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "Ar",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "power",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "temp",
+"fieldtype": "Number",
+"format": "#.##",
+"init": "500.0"
+}
+],
+"formathtml": true,
+"formatname": "D_CL200Metal",
+"outputlines": [
+"Layer: <b>{*material*}</b>",
+"t (nm): {*time*}",
+"CH: {*CH*}",
+"Ar: {*Ar*}",
+"P: {*power*}",
+"T: {*temp*}"
+],
+"spacebetween": false,
+"tables": true,
+"titleline": "{*material*}"
+},
+{
+"fields": [
+{
+"evalhtml": true,
+"fieldname": "material",
+"fieldtype": "Choice",
+"format": "KNN"
+},
+{
+"fieldname": "time",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "CH",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "Ar",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "O2",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "power",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "temp",
+"fieldtype": "Number",
+"format": "#.##",
+"init": "500"
+}
+],
+"formathtml": true,
+"formatname": "D_CL200Oxide",
+"icon": "bullet_1",
+"outputlines": [
+"Layer: <b>{*material*}</b>",
+"t (s): {*time*}",
+"CH: {*CH*}",
+"Ar: {*Ar*}",
+"O2:{*O2*}",
+"P: {*power*}",
+"T: {*temp*}"
+],
+"spacebetween": false,
+"tables": true,
+"titleline": "{*material*}"
+},
+{
+"fields": [
+{
+"evalhtml": true,
+"fieldname": "material",
+"fieldtype": "Choice",
+"format": "Ti/Pt"
+},
+{
+"fieldname": "time",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "CH",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "Ar",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "O2",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "temp",
+"fieldtype": "Number",
+"format": "#.##",
+"init": "500.0"
+},
+{
+"fieldname": "power",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "frequency",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "reverse",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "pulse_on_time",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"eqn": "{*pulse_on_time*}*{*frequency*}/10",
+"fieldname": "duty_cycle",
+"fieldtype": "Math",
+"format": "#.##"
+}
+],
+"formathtml": true,
+"formatname": "D_CL200PulsedDC",
+"icon": "bullet_1",
+"outputlines": [
+"Layer: <b>{*material*}</b>",
+"t (s): {*time*}",
+"CH: {*CH*}",
+"Ar: {*Ar*}",
+"O2: {*O2*}",
+"T: {*temp*}",
+"P: {*power*}",
+"f (kHz): {*frequency*}",
+"On (us):{*pulse_on_time*}",
+"D (%): {*duty_cycle*}"
+],
+"spacebetween": false,
+"tables": true,
+"titleline": "{*material*}"
+},
+{
+"fields": [
+{
+"evalhtml": true,
+"fieldname": "GalvanicMaterial",
+"fieldtype": "Choice",
+"format": "Ni/Cu"
+},
+{
+"fieldname": "GalvanicTime",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "GalvanicTemp",
+"fieldtype": "Number",
+"format": "#.##",
+"init": "500.0"
+},
+{
+"fieldname": "GalvanicCurrent",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "GalvanicVoltage",
+"fieldtype": "Number",
+"format": "#.##"
+}
+],
+"formathtml": true,
+"formatname": "D_Galvanic",
+"icon": "bullet_3",
+"outputlines": [
+"Layer: <b>{*GalvanicMaterial*}</b>",
+"t (min): {*GalvanicTime*}",
+"I (A): {*GalvanicCurrent*}",
+"V (V): {*GalvanicVoltage*}",
+"T: {*GalvanicTemp*}"
+],
+"spacebetween": false,
+"tables": true,
+"titleline": "{*GalvanicMaterial*}"
+},
+{
+"fields": [
+{
+"fieldname": "Material",
+"fieldtype": "Text"
+},
+{
+"fieldname": "Z400_Ar",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "Z400_O2",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "Z400_Pressure",
+"fieldtype": "Number",
+"format": "#.#E-#"
+},
+{
+"fieldname": "Z400_Power",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "Z400_DCBias",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "Z400_Time",
+"fieldtype": "Number",
+"format": "#.##"
+}
+],
+"formathtml": true,
+"formatname": "D_Z400Metal",
+"outputlines": [
+"Material:{*Material*}",
+"Ar (SCCM):{*Z400_Ar*}",
+"Pres. (mbar):{*Z400_Pressure*}",
+"P eff. (W): {*Z400_Power*}",
+"DC (V): {*Z400_DCBias*}",
+"Time (s): {*Z400_Time*}"
+],
+"spacebetween": false,
+"tables": true,
+"titleline": "{*Material*}"
+},
+{
+"fields": [
+{
+"fieldname": "Material",
+"fieldtype": "Text"
+},
+{
+"fieldname": "Z400_Ar",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "Z400_O2",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "Z400_Pressure",
+"fieldtype": "Number",
+"format": "#.#E-#"
+},
+{
+"fieldname": "Z400_Power",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "Z400_DCBias",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "Z400_Time",
+"fieldtype": "Number",
+"format": "#.##"
+}
+],
+"formathtml": true,
+"formatname": "D_Z400Other",
+"generic": "D_Z400Metal",
+"icon": "bullet_2",
+"outputlines": [
+"Material:{*Material*}",
+"Ar (SCCM):{*Z400_Ar*}",
+"Pres. (mbar):{*Z400_Pressure*}",
+"P eff. (W): {*Z400_Power*}",
+"DC (V): {*Z400_DCBias*}",
+"Time (s): {*Z400_Time*}"
+],
+"spacebetween": false,
+"tables": true,
+"titleline": "{*Material*}"
+},
+{
+"fields": [
+{
+"fieldname": "Material",
+"fieldtype": "Text"
+},
+{
+"fieldname": "Z400_Ar",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "Z400_O2",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "Z400_Pressure",
+"fieldtype": "Number",
+"format": "#.#E-#"
+},
+{
+"fieldname": "Z400_Power",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "Z400_DCBias",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "Z400_Time",
+"fieldtype": "Number",
+"format": "#.##"
+}
+],
+"formathtml": true,
+"formatname": "D_Z400Oxide",
+"icon": "bullet_1",
+"outputlines": [
+"Material:{*Material*}",
+"Ar (SCCM):{*Z400_Ar*}",
+"Pres. (mbar):{*Z400_Pressure*}",
+"P eff. (W): {*Z400_Power*}",
+"DC (V): {*Z400_DCBias*}",
+"Time (s): {*Z400_Time*}"
+],
+"spacebetween": false,
+"tables": true,
+"titleline": "{*Material*}"
+},
+{
+"condition": "Boolean == \"yes\"",
+"fields": [
+{
+"fieldname": "Tag",
+"fieldtype": "Text"
+},
+{
+"fieldname": "Boolean",
+"fieldtype": "Boolean",
+"format": "yes/no"
+}
+],
+"formatname": "G_Boolean",
+"icon": "check_2",
+"outputlines": [
+"{*Tag*}: {*Boolean*}"
+],
+"titleline": "{*Tag*}"
+},
+{
+"condition": "Boolean == \"no\"",
+"fields": [
+{
+"fieldname": "Tag",
+"fieldtype": "Text"
+},
+{
+"fieldname": "Boolean",
+"fieldtype": "Boolean",
+"format": "yes/no"
+}
+],
+"formatname": "G_Boolean_false",
+"generic": "G_Boolean",
+"icon": "x_3",
+"outputlines": [
+"{*Tag*}: {*Boolean*}"
+],
+"titleline": "{*Tag*}"
+},
+{
+"fields": [
+{
+"fieldname": "Name",
+"fieldtype": "Text"
+},
+{
+"fieldname": "Link",
+"fieldtype": "ExternalLink"
+}
+],
+"formatname": "G_File",
+"icon": "arrow_5",
+"outputlines": [
+"{*Link*}"
+],
+"titleline": "{*Name*}"
+},
+{
+"fields": [
+{
+"fieldname": "Image",
+"fieldtype": "Picture"
+},
+{
+"fieldname": "Caption",
+"fieldtype": "Text"
+}
+],
+"formathtml": true,
+"formatname": "G_Image",
+"icon": "colors",
+"outputlines": [
+"<i>{*Caption*}:</i>",
+"{*Image*}"
+],
+"titleline": "{*Caption*}"
+},
+{
+"condition": "NoteType == \"Note\"",
+"fields": [
+{
+"fieldname": "NoteText",
+"fieldtype": "Text"
+},
+{
+"fieldname": "NoteType",
+"fieldtype": "Choice",
+"format": "Note/Warning/Success/Failure",
+"init": "Note"
+}
+],
+"formathtml": true,
+"formatname": "G_Note",
+"icon": "note",
+"outputlines": [
+"{*NoteText*}"
+],
+"spacebetween": false,
+"titleline": "Note"
+},
+{
+"condition": "NoteType == \"Success\"",
+"fields": [
+{
+"fieldname": "NoteText",
+"fieldtype": "Text"
+},
+{
+"fieldname": "NoteType",
+"fieldtype": "Choice",
+"format": "Note/Warning/Success/Failure"
+}
+],
+"formathtml": true,
+"formatname": "G_Note_Check",
+"generic": "G_Note",
+"icon": "check_1",
+"outputlines": [
+"<p style=\"color:#55AA22\";>{*NoteText*}</p>"
+],
+"spacebetween": false,
+"titleline": "Note"
+},
+{
+"condition": "NoteType == \"Failure\"",
+"fields": [
+{
+"fieldname": "NoteText",
+"fieldtype": "Text"
+},
+{
+"fieldname": "NoteType",
+"fieldtype": "Choice",
+"format": "Note/Warning/Success/Failure"
+}
+],
+"formathtml": true,
+"formatname": "G_Note_Cross",
+"generic": "G_Note",
+"icon": "x_2",
+"outputlines": [
+"<p style=\"color:#FF0000\";>{*NoteText*}</p>"
+],
+"spacebetween": false,
+"titleline": "Note"
+},
+{
+"condition": "NoteType == \"Warning\"",
+"fields": [
+{
+"fieldname": "NoteText",
+"fieldtype": "Text"
+},
+{
+"fieldname": "NoteType",
+"fieldtype": "Choice",
+"format": "Note/Warning/Success/Failure"
+}
+],
+"formathtml": true,
+"formatname": "G_Note_Warning",
+"generic": "G_Note",
+"icon": "warning",
+"outputlines": [
+"<p style=\"color:#EE7700\";>{*NoteText*}</p>"
+],
+"spacebetween": false,
+"titleline": "Note"
+},
+{
+"childTypeLimit": [
+"G_Image",
+"G_Note",
+"G_Page"
+],
+"fields": [
+{
+"fieldname": "Name",
+"fieldtype": "Text"
+},
+{
+"fieldname": "Text",
+"fieldtype": "Text",
+"lines": 15
+}
+],
+"formathtml": true,
+"formatname": "G_Page",
+"icon": "doc",
+"outputlines": [
+"<b>{*Name*}</b>",
+"{*Text*}"
+],
+"titleline": "{*Name*}"
+},
+{
+"fields": [
+{
+"fieldname": "Tag",
+"fieldtype": "Text"
+},
+{
+"fieldname": "Value",
+"fieldtype": "Number",
+"format": "#. #############"
+},
+{
+"fieldname": "Unit",
+"fieldtype": "Text"
+}
+],
+"formatname": "G_Value",
+"icon": "sum",
+"outputlines": [
+"{*Tag*}: {*Value*} {*Unit*}"
+],
+"titleline": "{*Tag*}"
+},
+{
+"fields": [
+{
+"fieldname": "BakeTemp",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "BakeTime",
+"fieldtype": "Number",
+"format": "#.##"
+}
+],
+"formathtml": true,
+"formatname": "L_Bake",
+"icon": "round_plus",
+"outputlines": [
+"Bake {*BakeTemp*}\u00b0C, {*BakeTime*}s"
+],
+"spacebetween": false,
+"titleline": "Bake {*BakeTime*}s"
+},
+{
+"fields": [
+{
+"fieldname": "DevelopmentTime",
+"fieldtype": "Number",
+"format": "#.##"
+}
+],
+"formathtml": true,
+"formatname": "L_Development",
+"icon": "clock",
+"outputlines": [
+"Development {*DevelopmentTime*}s"
+],
+"spacebetween": false,
+"titleline": "Development {*DevelopmentTime*}s"
+},
+{
+"fields": [
+{
+"fieldname": "Dose",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "Defoc",
+"fieldtype": "Number",
+"format": "#.##"
+}
+],
+"formathtml": true,
+"formatname": "L_Exposure",
+"icon": "bulb",
+"outputlines": [
+"Exposure {*Dose*}mJ/cm2, Defoc {*Defoc*}"
+],
+"spacebetween": false,
+"titleline": "Exposure {*Dose*} mJ/cm2"
+},
+{
+"fields": [
+{
+"fieldname": "SonicationTime",
+"fieldtype": "Number",
+"format": "#.#"
+},
+{
+"fieldname": "SonicationPower",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "SonicationTemp",
+"fieldtype": "Number",
+"format": "#.##"
+}
+],
+"formatname": "L_Sonication",
+"icon": "music",
+"outputlines": [
+"Sonication {*SonicationTime*} min",
+"Power: {*SonicationPower*}%",
+"Temperature: {*SonicationTemp*}\u00b0C"
+],
+"spacebetween": false,
+"titleline": "Sonication {*SonicationTime*} min"
+},
+{
+"fields": [
+{
+"fieldname": "Polymer",
+"fieldtype": "Text"
+},
+{
+"fieldname": "SpinSpeed",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "SpinAcceleration",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "SpinTime",
+"fieldtype": "Number",
+"format": "#.##"
+}
+],
+"formathtml": true,
+"formatname": "L_SpinCoating",
+"icon": "round_plus",
+"outputlines": [
+"Spin Coating of {*Polymer*}: {*SpinSpeed*} rpm, {*SpinTime*}s (acc. {*SpinAcceleration*}rpm/s)"
+],
+"spacebetween": false,
+"titleline": "Spin Coating {*SpinSpeed*} rpm"
+},
+{
+"fields": [
+{
+"fieldname": "Date",
+"fieldtype": "Date",
+"format": " %-d/%-m/%Y",
+"init": "Now"
+},
+{
+"fieldname": "MetrologyType",
+"fieldtype": "Text"
+}
+],
+"formathtml": true,
+"formatname": "M_Generic",
+"icon": "task_2",
+"outputlines": [
+"<b>{*Date*}</b> {*MetrologyType*}"
+],
+"titleline": "{*MetrologyType*}"
+},
+{
+"fields": [
+{
+"fieldname": "Date",
+"fieldtype": "Date",
+"format": " %-d/%-m/%Y",
+"init": "Now"
+},
+{
+"fieldname": "MicroscopyType",
+"fieldtype": "Choice",
+"format": "Optical/Electron",
+"init": "Optical"
+},
+{
+"fieldname": "Images",
+"fieldtype": "ExternalLink",
+"init": "<a href=\"Data/Images\">Images</a>"
+}
+],
+"formathtml": true,
+"formatname": "M_Microscopy",
+"icon": "mag",
+"outputlines": [
+"<b>{*Date*}</b>: {*MicroscopyType*} microscopy {*Images*}"
+],
+"spacebetween": false,
+"titleline": "{*MicroscopyType*} microscopy"
+},
+{
+"fields": [
+{
+"fieldname": "Date",
+"fieldtype": "Date",
+"format": " %-d/%-m/%Y",
+"init": "Now"
+},
+{
+"fieldname": "AnnealingTemperature",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "AnnealingTime",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "AnnealingType",
+"fieldtype": "Choice",
+"format": "RTP/Muffle/Oven/Tube"
+},
+{
+"fieldname": "AnnealingAthmosphere",
+"fieldtype": "Choice",
+"format": "Vacuum/Air/Oxygen/Nitrogen/"
+}
+],
+"formathtml": true,
+"formatname": "P_Annealing",
+"icon": "rocket",
+"outputlines": [
+"<b>{*Date*}</b> {*AnnealingType*} treatment at {*AnnealingTemperature*}\u00b0C for {*AnnealingTime*} m in {*AnnealingAthmosphere*}"
+],
+"spacebetween": false,
+"titleline": "Thermal treatment"
+},
+{
+"childTypeLimit": [
+"D_BAK640Metal",
+"D_BAK640Other",
+"D_BAK640Oxide",
+"D_CL200Metal",
+"D_CL200Oxide",
+"D_CL200PulsedDC",
+"D_Galvanic",
+"D_Z400Metal",
+"D_Z400Other",
+"D_Z400Oxide"
+],
+"fields": [
+{
+"fieldname": "Date",
+"fieldtype": "Date",
+"format": " %-d/%-m/%Y",
+"init": "Now"
+},
+{
+"fieldname": "Method",
+"fieldtype": "Choice",
+"format": "Evaporation/Sputtering/CVD/ALD/Electroplating/Spin Coating"
+}
+],
+"formathtml": true,
+"formatname": "P_Deposition",
+"icon": "plus",
+"outputlines": [
+"<b>{*Date*}</b> Deposition by {*Method*}"
+],
+"spacebetween": false,
+"titleline": "{*Method*}"
+},
+{
+"childtype": "S_Dice",
+"fields": [
+{
+"fieldname": "Date",
+"fieldtype": "Date",
+"format": " %-d/%-m/%Y",
+"init": "Now"
+},
+{
+"fieldname": "DicingType",
+"fieldtype": "Choice",
+"format": "Manual/Automatic"
+}
+],
+"formathtml": true,
+"formatname": "P_Dicing",
+"icon": "table",
+"outputlines": [
+"<b>{*Date*}</b> {*DicingType*} dicing"
+],
+"spacebetween": false,
+"titleline": "{*DicingType*} dicing"
+},
+{
+"fields": [
+{
+"fieldname": "Date",
+"fieldtype": "Date",
+"format": " %-d/%-m/%Y",
+"init": "Now"
+},
+{
+"fieldname": "Chemical",
+"fieldtype": "Text"
+},
+{
+"fieldname": "LiftOffTemperature",
+"fieldtype": "Text"
+},
+{
+"fieldname": "LiftOffTime",
+"fieldtype": "Text"
+}
+],
+"formathtml": true,
+"formatname": "P_LiftOff",
+"icon": "round_minus",
+"outputlines": [
+"<b>{*Date*}</b> Resist removal in {*Chemical*} at {*LiftOffTemperature*}\u00b0C for {*LiftOffTime*} minutes"
+],
+"spacebetween": false,
+"titleline": "Resist removal"
+},
+{
+"fields": [
+{
+"fieldname": "Date",
+"fieldtype": "Date",
+"format": " %-d/%-m/%Y",
+"init": "Now"
+},
+{
+"fieldname": "Mask",
+"fieldtype": "ExternalLink"
+}
+],
+"formathtml": true,
+"formatname": "P_Lithography",
+"icon": "pencil",
+"outputlines": [
+"<b>{*Date*}</b>: Lithography of mask {*Mask*} in {*&Polymer*}"
+],
+"spacebetween": false,
+"titleline": "Lithography"
+},
+{
+"fields": [
+{
+"fieldname": "Date",
+"fieldtype": "Date",
+"format": " %-d/%-m/%Y",
+"init": "Now"
+},
+{
+"fieldname": "PlasmaPower",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "PlasmaGas",
+"fieldtype": "Choice",
+"format": "O2/Ar",
+"init": "O2"
+},
+{
+"fieldname": "PlasmaPressure",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "PlasmaTime",
+"fieldtype": "Number",
+"format": "#.##"
+}
+],
+"formathtml": true,
+"formatname": "P_Plasma",
+"icon": "sphere",
+"outputlines": [
+"<b>{*Date*}</b> Plasma {*PlasmaPower*}W, {*PlasmaTime*} min in {*PlasmaPressure*} mbar of {*PlasmaGas*}"
+],
+"spacebetween": false,
+"titleline": "Plasma {*PlasmaGas*} {*PlasmaPower*}W"
+},
+{
+"fields": [
+{
+"fieldname": "Date",
+"fieldtype": "Date",
+"format": " %-d/%-m/%Y",
+"init": "Now"
+},
+{
+"fieldname": "Chemical",
+"fieldtype": "Text"
+},
+{
+"fieldname": "WetEtchTemperature",
+"fieldtype": "Text"
+},
+{
+"fieldname": "WetEtchTime",
+"fieldtype": "Text"
+}
+],
+"formathtml": true,
+"formatname": "P_WetEtch",
+"icon": "minus",
+"outputlines": [
+"<b>{*Date*}</b> Wet etched in {*Chemical*} at {*WetEtchTemperature*}\u00b0C for {*WetEtchTime*} minutes"
+],
+"spacebetween": false,
+"titleline": "Wet Etch"
+},
+{
+"fields": [
+{
+"fieldname": "Name",
+"fieldtype": "Text",
+"sortkeynum": 1
+},
+{
+"fieldname": "Substrate",
+"fieldtype": "Choice",
+"format": "Dummy/Prime Si/Thermal Oxide/Glass/Quartz/Ceramic/Metal"
+}
+],
+"formathtml": true,
+"formatname": "S_Dice",
+"icon": "table",
+"outputlines": [
+"<b>{*Name*}</b> ({*Substrate*})"
+],
+"titleline": "{*Name*}"
+},
+{
+"fields": [
+{
+"fieldname": "Name",
+"fieldtype": "Text",
+"sortkeynum": 1
+},
+{
+"fieldname": "Lasermark",
+"fieldtype": "Text"
+},
+{
+"fieldname": "Substrate",
+"fieldtype": "Choice",
+"format": "Dummy/Prime Si/Thermal Oxide/Glass/Quartz/Ceramic/Metal"
+}
+],
+"formathtml": true,
+"formatname": "S_Wafer",
+"icon": "misc",
+"outputlines": [
+"<b>{*Name*}</b>: Lasermark <b>{*Lasermark*}</b> ({*Substrate*})"
+],
+"titleline": "{*Name*}"
+}
+],
+"nodes": [
+{
+"children": [],
+"data": {
+"Name": "Page<br />",
+"Text": ""
+},
+"format": "G_Page",
+"uid": "04d5ade0b5e311edb62fd319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Name": "Journals",
+"Text": "Journals allow to write down any kind of general text related or unrelated to the samples in the database.<br />A Journal can contain any amount of pages of <u><i>formatted</i></u> text as well as link to other database <a href=\"#b4026def878b11edb00fc7f3b7147ef6\">entries</a> or external files or <a href=\"https://www.polifab.polimi.it\">webpages</a>.<br />Formatting, links and other useful functions are accessible by mouse right-click while editing the \"Text\" field.<br /><br />Beside <b>Page</b><u>,</u> another data type already provided is <b>Image</b> which allows to display in line an <a href=\"#1f1b286fb53611edb6e0d319a877bc10\">image</a> with the relative caption."
+},
+"format": "G_Page",
+"uid": "05a9c119b50911edb57cd319a877bc10"
+},
+{
+"children": [],
+"data": {
+"SonicationPower": "70",
+"SonicationTemp": "",
+"SonicationTime": "5"
+},
+"format": "L_Sonication",
+"uid": "0b93e17fb77111ed8856309c23d25aa5"
+},
+{
+"children": [
+"1bbb9d59b51211eda317d319a877bc10",
+"833496b1b51311edbf7ad319a877bc10"
+],
+"data": {
+"Date": "2023-02-20",
+"Method": "Evaporation"
+},
+"format": "P_Deposition",
+"uid": "0fb1aa19b50d11ed9d56d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Caption": "Image",
+"Image": "<img src=\"Pictures/Guide/logo.png\" />"
+},
+"format": "G_Image",
+"uid": "0fc0e134b5e311edb13bd319a877bc10"
+},
+{
+"children": [
+"0b93e17fb77111ed8856309c23d25aa5"
+],
+"data": {
+"Chemical": "DMSO",
+"Date": "2023-03-02",
+"LiftOffTemperature": "70",
+"LiftOffTime": "15"
+},
+"format": "P_LiftOff",
+"uid": "1251bf66b62011ed8e04d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"BAKMaterial": "ZnS",
+"BAKRate": "4",
+"BAKThickness": "900.0"
+},
+"format": "D_BAK640Other",
+"uid": "12fcd97ebb8511ed9e06f2121efb8ca4"
+},
+{
+"children": [],
+"data": {
+"Name": "Processes",
+"Text": "<br />A list of default processes is already in this file. Ready to copy entries are in <a href=\"#1c059884b51a11eda830d319a877bc10\">process examples</a><br />First level processes include Lithography, Thermal treatments, Metrology steps, Etch, Depositions... For substeps or large tables of parameters a second level of depth is added in the hierarchy.<br />This can be the example of the parameters of individual al layers in a depostion or of spin coating in a lithographic process.<br />Data Types can be customized according to the need and new ones can be added.<br />"
+},
+"format": "G_Page",
+"uid": "17196345b51411eda80ad319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Caption": "Child Type Limits for Deposition",
+"Image": "<img src=\"Pictures/Guide/Child Type Limits.png\" />"
+},
+"format": "G_Image",
+"uid": "1a812b72b5cb11ed87bed319a877bc10"
+},
+{
+"children": [
+"3759ad4abd2f11ed8b85a7ff4e30a158"
+],
+"data": {
+"BAKMaterial": "Al2O3",
+"BAKRate": "0.2",
+"BAKThickness": "20"
+},
+"format": "D_BAK640Oxide",
+"uid": "1bbb9d59b51211eda317d319a877bc10"
+},
+{
+"children": [
+"4e78186fb51a11ed9b0bd319a877bc10",
+"d3f3cfe8b55511ed9ed9d319a877bc10",
+"d3f3cfe7b55511ed9fedd319a877bc10",
+"d3c9b6bdb53b11edb12fd319a877bc10",
+"c9ac97c0b5e511ed9e78d319a877bc10",
+"e0a5236eb53411ed88a9d319a877bc10",
+"e0f92f56b68011ed93bb309c23d25aa5",
+"1251bf66b62011ed8e04d319a877bc10",
+"cad636f0b55911edbe3ed319a877bc10",
+"27e70189b51a11ed8d8ed319a877bc10",
+"27e7018cb51a11ed9b26d319a877bc10",
+"f3b6abe8ba9a11edb49bfe50e5164240"
+],
+"data": {
+"Lasermark": "AAAA",
+"Name": "Processes",
+"Substrate": "Ceramic"
+},
+"format": "S_Wafer",
+"uid": "1c059884b51a11eda830d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Caption": "Hierarchy of samples",
+"Image": "<img src=\"Pictures/Guide/samples.png\" />"
+},
+"format": "G_Image",
+"uid": "1f1b286fb53611edb6e0d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Tag": "O2 Pressure",
+"Unit": "mbar",
+"Value": "0.0001"
+},
+"format": "G_Value",
+"uid": "21257592bb8411eda827f2121efb8ca4"
+},
+{
+"children": [
+"27e7018bb51a11edbfcbd319a877bc10",
+"2f276d1cb60711edb4b6d319a877bc10",
+"12fcd97ebb8511ed9e06f2121efb8ca4"
+],
+"data": {
+"Date": "2023-02-20",
+"Method": "Evaporation"
+},
+"format": "P_Deposition",
+"uid": "27e70189b51a11ed8d8ed319a877bc10"
+},
+{
+"children": [],
+"data": {
+"BAKMaterial": "Al",
+"BAKRate": "2",
+"BAKThickness": "100"
+},
+"format": "D_BAK640Metal",
+"uid": "27e7018bb51a11edbfcbd319a877bc10"
+},
+{
+"children": [
+"a02fa8e6bdb011edba50309c23d25aa5",
+"27e931b2bdf111ed9953a7ff4e30a158"
+],
+"data": {
+"Date": "2023-02-20",
+"Method": "Sputtering"
+},
+"format": "P_Deposition",
+"uid": "27e7018cb51a11ed9b26d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Material": "SiO2"
+},
+"format": "D_Z400Oxide",
+"uid": "27e931b2bdf111ed9953a7ff4e30a158"
+},
+{
+"children": [],
+"data": {
+"Link": "<a href=\"Pictures/Guide/\">Data Folder</a>",
+"Name": "Ellipsometry data"
+},
+"format": "G_File",
+"uid": "2d2097b0b5e311edaa64d319a877bc10"
+},
+{
+"children": [
+"7f0f2257b50011ed83a5d319a877bc10",
+"486de0b5b5e111ed99edd319a877bc10"
+],
+"data": {
+"Element_Data": "Guides"
+},
+"format": "C_Journals",
+"uid": "2ec29bccb50011eda0b2d319a877bc10"
+},
+{
+"children": [
+"21257592bb8411eda827f2121efb8ca4"
+],
+"data": {
+"BAKMaterial": "Al2O3",
+"BAKRate": "0.2",
+"BAKThickness": "20"
+},
+"format": "D_BAK640Oxide",
+"uid": "2f276d1cb60711edb4b6d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Caption": "Cloned process",
+"Image": "<img src=\"Pictures/Guide/cloned process.png\" />"
+},
+"format": "G_Image",
+"uid": "2f52c753b81911edb892309c23d25aa5"
+},
+{
+"children": [],
+"data": {
+"Tag": "Numerical tag",
+"Unit": "arb. units",
+"Value": "15.0"
+},
+"format": "G_Value",
+"uid": "32fd9ceab74611ed93a2309c23d25aa5"
+},
+{
+"children": [],
+"data": {
+"Tag": "O2 Pressure",
+"Unit": "mbar",
+"Value": "0.0001"
+},
+"format": "G_Value",
+"uid": "3759ad4abd2f11ed8b85a7ff4e30a158"
+},
+{
+"children": [],
+"data": {
+"Defoc": "0",
+"Dose": "240"
+},
+"format": "L_Exposure",
+"uid": "42f5468cb60511eda7fed319a877bc10"
+},
+{
+"children": [
+"b123b71fb5c711ed8565d319a877bc10",
+"1a812b72b5cb11ed87bed319a877bc10"
+],
+"data": {
+"Name": "Editing Data Structure"
+},
+"format": "C_Journal",
+"uid": "486de0b5b5e111ed99edd319a877bc10"
+},
+{
+"children": [
+"5a49aa5bb50711ed8c37d319a877bc10",
+"888e1f73b5c511ed8981d319a877bc10"
+],
+"data": {
+"Name": "Example Wafer Box"
+},
+"format": "C_Sample_family",
+"uid": "4d5510d1b50711eda501d319a877bc10"
+},
+{
+"children": [
+"6de6eb81b60411ed845cd319a877bc10",
+"d663133ab60411edbcf4d319a877bc10",
+"42f5468cb60511eda7fed319a877bc10",
+"d8eaf4bab60511ed90c4d319a877bc10"
+],
+"data": {
+"Date": "2023-02-22",
+"Mask": "<a href=\"Masks/resolution_test.gds\">resolution_test.gds</a>"
+},
+"format": "P_Lithography",
+"uid": "4e78186fb51a11ed9b0bd319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Defoc": "0",
+"Dose": "120.0"
+},
+"format": "L_Exposure",
+"uid": "5394c81eb62111eda1e9d319a877bc10"
+},
+{
+"children": [
+"5394ef2eb62111ed848dd319a877bc10",
+"5394ef2fb62111ed87dfd319a877bc10",
+"5394c81eb62111eda1e9d319a877bc10",
+"5394ef30b62111ed9c31d319a877bc10"
+],
+"data": {
+"Date": "2023-02-22",
+"Mask": "<a href=\"Data/Masks/resolution_test.gds\">resolution_test.gds</a>"
+},
+"format": "P_Lithography",
+"uid": "5394c81fb62111ed820cd319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Polymer": "AZ1518",
+"SpinAcceleration": "500.0",
+"SpinSpeed": "5000",
+"SpinTime": "60"
+},
+"format": "L_SpinCoating",
+"uid": "5394ef2eb62111ed848dd319a877bc10"
+},
+{
+"children": [],
+"data": {
+"BakeTemp": "110",
+"BakeTime": "90"
+},
+"format": "L_Bake",
+"uid": "5394ef2fb62111ed87dfd319a877bc10"
+},
+{
+"children": [],
+"data": {
+"DevelopmentTime": "45"
+},
+"format": "L_Development",
+"uid": "5394ef30b62111ed9c31d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Name": "Clones",
+"Text": "As it is often the case, a sample can be cut to proceed with a split process on different dices.<br />To handle this in the best way you can have <b>both</b> a copy inside the parent wafer and a <i>clone</i> as a new sample.<br />The recomended procedure is the following as done with examples <a href=\"#888e1f73b5c511ed8981d319a877bc10\">Wafer25</a> and <a href=\"#bc5786a2b51d11edb8c3d319a877bc10\">W25D1</a>.<br /><br /><br />1- Log the <a href=\"#ec106aa7b51c11ed9ed1d319a877bc10\">dicing process</a> performed and define parts name under it<br />2- Clone (Copy and Edit -&gt; Paste cloned child) the dices that go on with processing on the sample familiy where they belong<br /><br />Every modification made to one of the clones and its children will be automatically reflected on the other.<br />Clones appear in both their path in the top bar (a.k.a. breadcrumb view).<br /><br />Batch processes regarding multiple samples at once can be cloned as well in the same way."
+},
+"format": "G_Page",
+"uid": "55032c33b53611ed9445d319a877bc10"
+},
+{
+"children": [
+"5394c81fb62111ed820cd319a877bc10",
+"d3f3cfebb55511edbb6fd319a877bc10",
+"d92c38c2ba7b11ed93e2fe50e5164240",
+"bfad2b40ba7d11ed8afffe50e5164240"
+],
+"data": {
+"Lasermark": "6NC2",
+"Name": "Wafer1",
+"Substrate": "Prime Si"
+},
+"format": "S_Wafer",
+"uid": "5a49aa5bb50711ed8c37d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"NoteText": "Generic Note",
+"NoteType": "Note"
+},
+"format": "G_Note",
+"uid": "5c0a02d0b5c711eda614d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Name": "Files",
+"Text": "In the same way of notes, a <u>File</u> node can be attached to any other element. These nodes contain just an external link to a file (or a folder if edited accordingly) in relative or abolute path. The choice of absolute or relative paths should be consistent in all the entries; a relative path is advised if the database and relative files are shared among more people or could be moved to a different path at a later stage."
+},
+"format": "G_Page",
+"uid": "5fb1f315b5e811ed9308d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Caption": "Examples of processes",
+"Image": "<img src=\"Pictures/Guide/processes.png\" />"
+},
+"format": "G_Image",
+"uid": "625be4e3b53611ed89a6d319a877bc10"
+},
+{
+"children": [
+"e66166b8b74511edbbf8309c23d25aa5",
+"2d2097b0b5e311edaa64d319a877bc10"
+],
+"data": {
+"Date": "2023-02-23",
+"MetrologyType": "Ellipsometry"
+},
+"format": "M_Generic",
+"uid": "64c7d03bb51e11edb359d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Name": "Numerical and boolean tag",
+"Text": "A convenient way to add a relevant quantitative information that is not already part of a node is to attach a <u>Numerical tag</u> child to it. In the same way a <u>Boolean tag</u> can store yes/no conditions. These tags can still be then used for filtering or searching samples based on matching conditions. A typical use case is the enormous set of metrology and characterization you may run. Instead of creating one type for each characterization you can use tags to build up a custom metrology entry with the relevant informations stored as child nodes. <br />Of course, if you are going to run always the same characterizations producing consistent outputs, you can define a specific data type as described in <a href=\"#486de0b5b5e111ed99edd319a877bc10\">Editing Data Structure</a> to include it in the first place.<br /><br />Note: numerical tags can accept inputs in scientific notation (e.g. 1e-5) but will immediately convert and display it in decimal notation (i.e. 0.00001). If found necessary, a data type with output in scientific notation can be easily added. Nevertheless, data are always stored as decimal behind the courtains and all conditions on values for searching/filtering the database should be written with decimal notation only."
+},
+"format": "G_Page",
+"uid": "66da5cd1b79611ed9b5cdcc7556f6d82"
+},
+{
+"children": [],
+"data": {
+"NoteText": "Warning",
+"NoteType": "Warning"
+},
+"format": "G_Note_Warning",
+"uid": "6ddae204b5c711ed9d52d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Polymer": "AZ5214E",
+"SpinAcceleration": "500.0",
+"SpinSpeed": "5000",
+"SpinTime": "60"
+},
+"format": "L_SpinCoating",
+"uid": "6de6eb81b60411ed845cd319a877bc10"
+},
+{
+"children": [],
+"data": {
+"NoteText": "Rinse in IPA",
+"NoteType": "Note"
+},
+"format": "G_Note",
+"uid": "6f8d072aba7d11ed8758fe50e5164240"
+},
+{
+"children": [],
+"data": {
+"NoteText": "Success",
+"NoteType": "Success"
+},
+"format": "G_Note_Check",
+"uid": "7262f66db5c711edb8d3d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Link": "<a href=\"Pictures/\">Folder link example</a>",
+"Name": "File (Link)"
+},
+"format": "G_File",
+"uid": "743efddeb5e411edb659d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"NoteText": "Failure",
+"NoteType": "Failure"
+},
+"format": "G_Note_Cross",
+"uid": "74df6fdab5c711eda9d5d319a877bc10"
+},
+{
+"children": [
+"f5ac0a3ab53b11edb60fd319a877bc10",
+"05a9c119b50911edb57cd319a877bc10",
+"f8dfa745b51411ed8f24d319a877bc10",
+"1f1b286fb53611edb6e0d319a877bc10",
+"17196345b51411eda80ad319a877bc10",
+"625be4e3b53611ed89a6d319a877bc10",
+"f9b8a856b5c611ed8c08d319a877bc10",
+"5fb1f315b5e811ed9308d319a877bc10",
+"66da5cd1b79611ed9b5cdcc7556f6d82",
+"dce13fa0b5e811ed94d9d319a877bc10",
+"55032c33b53611ed9445d319a877bc10",
+"e4991b20b53611eda947d319a877bc10",
+"2f52c753b81911edb892309c23d25aa5"
+],
+"data": {
+"Name": "Basic Usage (click me)"
+},
+"format": "C_Journal",
+"uid": "7f0f2257b50011ed83a5d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"BAKMaterial": "ZnS",
+"BAKRate": "4",
+"BAKThickness": "900.0"
+},
+"format": "D_BAK640Other",
+"uid": "833496b1b51311edbf7ad319a877bc10"
+},
+{
+"children": [
+"0fb1aa19b50d11ed9d56d319a877bc10",
+"ec106aa7b51c11ed9ed1d319a877bc10"
+],
+"data": {
+"Lasermark": "6JL3",
+"Name": "Wafer25",
+"Substrate": "Prime Si"
+},
+"format": "S_Wafer",
+"uid": "888e1f73b5c511ed8981d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Lasermark": "6NC2",
+"Name": "Wafer",
+"Substrate": "Prime Si"
+},
+"format": "S_Wafer",
+"uid": "8e49b104b5e411ed842bd319a877bc10"
+},
+{
+"children": [],
+"data": {
+"AnnealingAthmosphere": "Vacuum",
+"AnnealingTemperature": "600",
+"AnnealingTime": "60",
+"AnnealingType": "RTP",
+"Date": "2023-02-23"
+},
+"format": "P_Annealing",
+"uid": "958b5d3eb5c411ed8a13d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Name": "Dice",
+"Substrate": "Ceramic"
+},
+"format": "S_Dice",
+"uid": "96853b39b5e411ed9b28d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Date": "2023-02-23",
+"MicroscopyType": "Electron"
+},
+"format": "M_Microscopy",
+"uid": "9b11d7c0ba7c11eda582fe50e5164240"
+},
+{
+"children": [],
+"data": {
+"GalvanicCurrent": "0.1",
+"GalvanicMaterial": "Cu",
+"GalvanicTemp": "25",
+"GalvanicTime": "120",
+"GalvanicVoltage": "1.3"
+},
+"format": "D_Galvanic",
+"uid": "9ddf182eb55811edb1b5d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Material": "Si",
+"Z400_Ar": "20",
+"Z400_DCBias": "1805",
+"Z400_Power": "147",
+"Z400_Pressure": "0.02",
+"Z400_Time": "600"
+},
+"format": "D_Z400Other",
+"uid": "a02fa8e6bdb011edba50309c23d25aa5"
+},
+{
+"children": [],
+"data": {
+"Name": "Data Types",
+"Text": "The data structure is completely configurable, after you get familiar with the examples, you can modify and/or add data types with Data -&gt; Configure Data Types according to your needs.<br />Please refer to the documentation for more details on Data Types, configuration of fields and outputs. The complete Treeline manual can be found under the Help menu.<br /><br />Some suggestions to maintain consistency in modified databases:<br /><br />1) Icons if possible should keep<br /><br /><b>+</b> for additive process<br /><b>-</b> for removal process<br /><br /><span style=\"color:#0000ff\">Blue</span> = metals<br /><span style=\"color:#ff0000\">Red</span> = oxides<br /><span style=\"color:#005500\">Green</span> = semiconductors/nitrides/sulfides/others<br /><br />2) The Data type should follow a naming like<br /><br />X_NameOfNewType<br /><br />where X:<br /><br />C: Container (Journals, Samples)<br />S: Sample (Wafer,Dice)<br />G: Generic (Page, Image, Note, File) <br /><br />First level process:<br />P: Process<br />M: Metrology<br /><br />Second level process:<br />D for Deposition<br />L for Lithography<br />E for Etch<br />...<br /><br /><b>Important:</b> Even though treeline does not really force any strong restriction it is a good practice to set legitimate Child Type Limits (in Type config, under advanced options). For example if you create a new process you will have to add it as legitimate for Wafers and/or Dices. See image below.<br /><br />"
+},
+"format": "G_Page",
+"uid": "b123b71fb5c711ed8565d319a877bc10"
+},
+{
+"children": [
+"4d5510d1b50711eda501d319a877bc10",
+"d27566dfb55511ed85e9d319a877bc10",
+"e97484dbb51e11eda061d319a877bc10"
+],
+"data": {
+"Name": "Examples"
+},
+"format": "C_Samples",
+"uid": "b4026def878b11edb00fc7f3b7147ef6"
+},
+{
+"children": [
+"958b5d3eb5c411ed8a13d319a877bc10",
+"64c7d03bb51e11edb359d319a877bc10"
+],
+"data": {
+"Name": "W25D1",
+"Substrate": "Prime Si"
+},
+"format": "S_Dice",
+"uid": "bc5786a2b51d11edb8c3d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"SonicationPower": "70",
+"SonicationTemp": "",
+"SonicationTime": "1"
+},
+"format": "L_Sonication",
+"uid": "bd352fe2ba7f11edbde3fe50e5164240"
+},
+{
+"children": [],
+"data": {
+"Date": "2023-03-02",
+"Images": "<a href=\"Data/Images\">Images</a>",
+"MicroscopyType": "Optical"
+},
+"format": "M_Microscopy",
+"uid": "bfad2b40ba7d11ed8afffe50e5164240"
+},
+{
+"children": [],
+"data": {
+"Date": "2023-02-23",
+"MicroscopyType": "Optical"
+},
+"format": "M_Microscopy",
+"uid": "c9ac97c0b5e511ed9e78d319a877bc10"
+},
+{
+"children": [
+"9ddf182eb55811edb1b5d319a877bc10"
+],
+"data": {
+"Date": "2023-02-22",
+"Method": "Electroplating"
+},
+"format": "P_Deposition",
+"uid": "cad636f0b55911edbe3ed319a877bc10"
+},
+{
+"children": [
+"bc5786a2b51d11edb8c3d319a877bc10",
+"e4329a51b51d11ed86b9d319a877bc10"
+],
+"data": {
+"Name": "Example Dice Tray"
+},
+"format": "C_Sample_family",
+"uid": "d27566dfb55511ed85e9d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Date": "2023-02-23",
+"DicingType": "Automatic"
+},
+"format": "P_Dicing",
+"uid": "d3c9b6bdb53b11edb12fd319a877bc10"
+},
+{
+"children": [],
+"data": {
+"AnnealingAthmosphere": "Vacuum",
+"AnnealingTemperature": "600",
+"AnnealingTime": "60",
+"AnnealingType": "RTP",
+"Date": "2023-02-23"
+},
+"format": "P_Annealing",
+"uid": "d3f3cfe7b55511ed9fedd319a877bc10"
+},
+{
+"children": [
+"f476de1ebb8111ed8690f2121efb8ca4",
+"f476de1dbb8111edaa13f2121efb8ca4"
+],
+"data": {
+"Date": "2023-02-22",
+"MetrologyType": "Metrology (generic)"
+},
+"format": "M_Generic",
+"uid": "d3f3cfe8b55511ed9ed9d319a877bc10"
+},
+{
+"children": [
+"f357ffbbb5c011edb900d319a877bc10"
+],
+"data": {
+"Chemical": "BOE",
+"Date": "2023-02-28",
+"WetEtchTemperature": "21",
+"WetEtchTime": "2"
+},
+"format": "P_WetEtch",
+"uid": "d3f3cfebb55511edbb6fd319a877bc10"
+},
+{
+"children": [],
+"data": {
+"BakeTemp": "110",
+"BakeTime": "90"
+},
+"format": "L_Bake",
+"uid": "d663133ab60411edbcf4d319a877bc10"
+},
+{
+"children": [
+"e60d464eb5e211ed97aed319a877bc10",
+"04d5ade0b5e311edb62fd319a877bc10",
+"0fc0e134b5e311edb13bd319a877bc10",
+"743efddeb5e411edb659d319a877bc10",
+"32fd9ceab74611ed93a2309c23d25aa5",
+"ea7616ddb77011ed8f90309c23d25aa5"
+],
+"data": {
+"Name": "Generic"
+},
+"format": "S_Wafer",
+"uid": "d865efafb5e211ed8d37d319a877bc10"
+},
+{
+"children": [
+"bd352fe2ba7f11edbde3fe50e5164240"
+],
+"data": {
+"DevelopmentTime": "45"
+},
+"format": "L_Development",
+"uid": "d8eaf4bab60511ed90c4d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"SonicationPower": "70",
+"SonicationTemp": "",
+"SonicationTime": "5"
+},
+"format": "L_Sonication",
+"uid": "d92c38c1ba7b11ed813afe50e5164240"
+},
+{
+"children": [
+"d92c38c1ba7b11ed813afe50e5164240",
+"6f8d072aba7d11ed8758fe50e5164240"
+],
+"data": {
+"Chemical": "AZ100 Remover ",
+"Date": "2023-03-02",
+"LiftOffTemperature": "50",
+"LiftOffTime": "15"
+},
+"format": "P_LiftOff",
+"uid": "d92c38c2ba7b11ed93e2fe50e5164240"
+},
+{
+"children": [],
+"data": {
+"Caption": "Files and tags on a metrology step",
+"Image": "<img src=\"Pictures/Guide/files.png\" />"
+},
+"format": "G_Image",
+"uid": "dce13fa0b5e811ed94d9d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Chemical": "HF 40%",
+"Date": "2023-02-28",
+"WetEtchTemperature": "21",
+"WetEtchTime": "2"
+},
+"format": "P_WetEtch",
+"uid": "e0a5236eb53411ed88a9d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Date": "2023-03-01",
+"PlasmaGas": "O2",
+"PlasmaPower": "150",
+"PlasmaPressure": "0.5",
+"PlasmaTime": "1"
+},
+"format": "P_Plasma",
+"uid": "e0f92f56b68011ed93bb309c23d25aa5"
+},
+{
+"children": [
+"9b11d7c0ba7c11eda582fe50e5164240"
+],
+"data": {
+"Name": "W25D2",
+"Substrate": "Prime Si"
+},
+"format": "S_Dice",
+"uid": "e4329a51b51d11ed86b9d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Caption": "Cloned dices",
+"Image": "<img src=\"Pictures/Guide/clones.png\" />"
+},
+"format": "G_Image",
+"uid": "e4991b20b53611eda947d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"NoteText": "Note",
+"NoteType": "Note"
+},
+"format": "G_Note",
+"uid": "e60d464eb5e211ed97aed319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Tag": "Thickness",
+"Unit": "nm",
+"Value": "941.0"
+},
+"format": "G_Value",
+"uid": "e66166b8b74511edbbf8309c23d25aa5"
+},
+{
+"children": [
+"8e49b104b5e411ed842bd319a877bc10",
+"96853b39b5e411ed9b28d319a877bc10",
+"1c059884b51a11eda830d319a877bc10",
+"d865efafb5e211ed8d37d319a877bc10"
+],
+"data": {
+"Name": "Presets"
+},
+"format": "C_Sample_family",
+"uid": "e97484dbb51e11eda061d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Boolean": "True",
+"Tag": "Boolean tag"
+},
+"format": "G_Boolean",
+"uid": "ea7616ddb77011ed8f90309c23d25aa5"
+},
+{
+"children": [
+"bc5786a2b51d11edb8c3d319a877bc10",
+"e4329a51b51d11ed86b9d319a877bc10"
+],
+"data": {
+"Date": "2023-02-23",
+"DicingType": "Manual"
+},
+"format": "P_Dicing",
+"uid": "ec106aa7b51c11ed9ed1d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"NoteText": "Damaged by etching",
+"NoteType": "Warning"
+},
+"format": "G_Note_Warning",
+"uid": "f357ffbbb5c011edb900d319a877bc10"
+},
+{
+"children": [
+"fd1f1758ba9a11ed9d66fe50e5164240",
+"fd1f1759ba9a11eda1d5fe50e5164240"
+],
+"data": {
+"Date": "2023-03-04",
+"Method": "Spin Coating"
+},
+"format": "P_Deposition",
+"uid": "f3b6abe8ba9a11edb49bfe50e5164240"
+},
+{
+"children": [],
+"data": {
+"Tag": "Numerical tag",
+"Unit": "arb. units",
+"Value": "333.3"
+},
+"format": "G_Value",
+"uid": "f476de1dbb8111edaa13f2121efb8ca4"
+},
+{
+"children": [],
+"data": {
+"Link": "<a href=\"Pictures/\">Folder link example</a>",
+"Name": "File (Link)"
+},
+"format": "G_File",
+"uid": "f476de1ebb8111ed8690f2121efb8ca4"
+},
+{
+"children": [],
+"data": {
+"Name": "General informations",
+"Text": "The database is structured as a tree to allow complete flexibility in the types of process flows that can be logged.<br />Each entry is called a <b>Node</b> and to each Node is associated a <b>Type</b>. Nodes can be freely moved up and down or across the tree hierarchy to represent correctly the flow of operations.<br />Each type contains specific <b>fields</b> which may be the parameters of a process, links to images or external files, a block of text like the one you are reading, and almost any conceivable form of data you may want to save.<br />Nodes can be copied and pasted allowing to quickly replicate a previous entry with only some minor modifications (e.g. changing just one parameter between two otherwise identical experiments)<br /><br />To edit fields, use the <i>Data Edit</i> tab on the bottom of this screen, to see properly formatted <b>output</b> use instead the <i>Data Output</i> tab.<br /><br />Several customizations and options can be found under the <u>Tools</u> menu. For instance you may be wanting to set the European date format in <i>General Options</i> as %d/%m/%y.<br />This template is typically intended to be used with <i>Show Output Descendants</i> enabled under the <u>View</u> menu or on the menu bar.<br /><br />Finally, in case of IP concerns, the file can be password protected from File -&gt; Properties"
+},
+"format": "G_Page",
+"uid": "f5ac0a3ab53b11edb60fd319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Name": "Samples",
+"Text": "You can organize samples in different sample families. According to the needs, a sample familily can be the container of all the samples of a project or represent a physical storage box.<br />Samples can be either <a href=\"#5a49aa5bb50711ed8c37d319a877bc10\">wafers</a> or <a href=\"#a81fb188b51011eda053d319a877bc10\">pieces</a> (dices) Each sample will then continue any number of processes ordered chronologically."
+},
+"format": "G_Page",
+"uid": "f8dfa745b51411ed8f24d319a877bc10"
+},
+{
+"children": [
+"5c0a02d0b5c711eda614d319a877bc10",
+"7262f66db5c711edb8d3d319a877bc10",
+"6ddae204b5c711ed9d52d319a877bc10",
+"74df6fdab5c711eda9d5d319a877bc10"
+],
+"data": {
+"Name": "Notes",
+"Text": "As in the image above, notes can be attached everywhere (processes, samples, containers...) like sticky notes. With the relevant difference that sticky notes are not cleanroom compatible.<br />The field \"NoteType\" allows you to give a visual feeback of what the note contains both in the output color and icons."
+},
+"format": "G_Page",
+"uid": "f9b8a856b5c611ed8c08d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Polymer": "PMMA 200K",
+"SpinAcceleration": "500.0",
+"SpinSpeed": "5000",
+"SpinTime": "60"
+},
+"format": "L_SpinCoating",
+"uid": "fd1f1758ba9a11ed9d66fe50e5164240"
+},
+{
+"children": [],
+"data": {
+"BakeTemp": "150",
+"BakeTime": "90"
+},
+"format": "L_Bake",
+"uid": "fd1f1759ba9a11eda1d5fe50e5164240"
+}
+],
+"properties": {
+"tlversion": "3.1.5",
+"topnodes": [
+"2ec29bccb50011eda0b2d319a877bc10",
+"b4026def878b11edb00fc7f3b7147ef6"
+],
+"zeroblanks": false
+}
+}
