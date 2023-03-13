@@ -176,32 +176,32 @@
 "fields": [
 {
 "evalhtml": true,
-"fieldname": "material",
+"fieldname": "Material",
 "fieldtype": "Choice",
 "format": "Ti/Pt"
 },
 {
-"fieldname": "time",
+"fieldname": "CL200_Time",
 "fieldtype": "Number",
 "format": "#.##"
 },
 {
-"fieldname": "CH",
+"fieldname": "CL200_CH",
 "fieldtype": "Number",
 "format": "#.##"
 },
 {
-"fieldname": "Ar",
+"fieldname": "CL200_Ar",
 "fieldtype": "Number",
 "format": "#.##"
 },
 {
-"fieldname": "power",
+"fieldname": "CL200_Power",
 "fieldtype": "Number",
 "format": "#.##"
 },
 {
-"fieldname": "temp",
+"fieldname": "CL200_Temp",
 "fieldtype": "Number",
 "format": "#.##",
 "init": "500.0"
@@ -210,130 +210,74 @@
 "formathtml": true,
 "formatname": "D_CL200Metal",
 "outputlines": [
-"Layer: <b>{*material*}</b>",
-"t (nm): {*time*}",
-"CH: {*CH*}",
-"Ar: {*Ar*}",
-"P: {*power*}",
-"T: {*temp*}"
+"Layer: <b>{*Material*}</b>",
+"t (nm): {*CL200_Time*}",
+"CH: {*CL200_CH*}",
+"Ar: {*CL200_Ar*}",
+"P: {*CL200_Power*}",
+"T: {*CL200_Temp*}"
 ],
 "spacebetween": false,
 "tables": true,
-"titleline": "{*material*}"
+"titleline": "{*Material*}"
 },
 {
 "fields": [
 {
 "evalhtml": true,
-"fieldname": "material",
-"fieldtype": "Choice",
-"format": "KNN"
-},
-{
-"fieldname": "time",
-"fieldtype": "Number",
-"format": "#.##"
-},
-{
-"fieldname": "CH",
-"fieldtype": "Number",
-"format": "#.##"
-},
-{
-"fieldname": "Ar",
-"fieldtype": "Number",
-"format": "#.##"
-},
-{
-"fieldname": "O2",
-"fieldtype": "Number",
-"format": "#.##"
-},
-{
-"fieldname": "power",
-"fieldtype": "Number",
-"format": "#.##"
-},
-{
-"fieldname": "temp",
-"fieldtype": "Number",
-"format": "#.##",
-"init": "500"
-}
-],
-"formathtml": true,
-"formatname": "D_CL200Oxide",
-"icon": "bullet_1",
-"outputlines": [
-"Layer: <b>{*material*}</b>",
-"t (s): {*time*}",
-"CH: {*CH*}",
-"Ar: {*Ar*}",
-"O2:{*O2*}",
-"P: {*power*}",
-"T: {*temp*}"
-],
-"spacebetween": false,
-"tables": true,
-"titleline": "{*material*}"
-},
-{
-"fields": [
-{
-"evalhtml": true,
-"fieldname": "material",
+"fieldname": "Material",
 "fieldtype": "Choice",
 "format": "Ti/Pt"
 },
 {
-"fieldname": "time",
+"fieldname": "CL200_Time",
 "fieldtype": "Number",
 "format": "#.##"
 },
 {
-"fieldname": "CH",
+"fieldname": "CL200_CH",
 "fieldtype": "Number",
 "format": "#.##"
 },
 {
-"fieldname": "Ar",
+"fieldname": "CL200_Ar",
 "fieldtype": "Number",
 "format": "#.##"
 },
 {
-"fieldname": "O2",
+"fieldname": "CL200_O2",
 "fieldtype": "Number",
 "format": "#.##"
 },
 {
-"fieldname": "temp",
+"fieldname": "CL200_Power",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "CL200_Temp",
 "fieldtype": "Number",
 "format": "#.##",
 "init": "500.0"
 },
 {
-"fieldname": "power",
+"fieldname": "CL200_Freq",
 "fieldtype": "Number",
 "format": "#.##"
 },
 {
-"fieldname": "frequency",
+"fieldname": "CL200_ReveseV",
 "fieldtype": "Number",
 "format": "#.##"
 },
 {
-"fieldname": "reverse",
-"fieldtype": "Number",
-"format": "#.##"
-},
-{
-"fieldname": "pulse_on_time",
+"fieldname": "CL200_PulseTime",
 "fieldtype": "Number",
 "format": "#.##"
 },
 {
 "eqn": "{*pulse_on_time*}*{*frequency*}/10",
-"fieldname": "duty_cycle",
+"fieldname": "CL200_DutyCycle",
 "fieldtype": "Math",
 "format": "#.##"
 }
@@ -342,20 +286,76 @@
 "formatname": "D_CL200PulsedDC",
 "icon": "bullet_1",
 "outputlines": [
-"Layer: <b>{*material*}</b>",
-"t (s): {*time*}",
-"CH: {*CH*}",
-"Ar: {*Ar*}",
-"O2: {*O2*}",
-"T: {*temp*}",
-"P: {*power*}",
-"f (kHz): {*frequency*}",
-"On (us):{*pulse_on_time*}",
-"D (%): {*duty_cycle*}"
+"Layer: <b>{*Material*}</b>",
+"t (s): {*CL200_Time*}",
+"CH: {*CL200_CH*}",
+"Ar: {*CL200_Ar*}",
+"O2: {*CL200_O2*}",
+"T: {*CL200_Temp*}",
+"P: {*CL200_Power*}",
+"f (kHz): {*CL200_Freq*}",
+"On (us):{*CL200_PulseTime*}",
+"D (%): {*CL200_DutyCycle*}"
 ],
 "spacebetween": false,
 "tables": true,
-"titleline": "{*material*}"
+"titleline": "{*Material*}"
+},
+{
+"fields": [
+{
+"evalhtml": true,
+"fieldname": "Material",
+"fieldtype": "Choice",
+"format": "KNN"
+},
+{
+"fieldname": "CL200_Time",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "CL200_CH",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "CL200_Ar",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "CL200_O2",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "CL200_Power",
+"fieldtype": "Number",
+"format": "#.##"
+},
+{
+"fieldname": "CL200_Temp",
+"fieldtype": "Number",
+"format": "#.##",
+"init": "500"
+}
+],
+"formathtml": true,
+"formatname": "D_CL200RF",
+"icon": "bullet_1",
+"outputlines": [
+"Layer: <b>{*Material*}</b>",
+"t (s): {*CL200_Time*}",
+"CH: {*CL200_CH*}",
+"Ar: {*CL200_Ar*}",
+"O2:{*CL200_O2*}",
+"P: {*CL200_Power*}",
+"T: {*CL200_Temp*}"
+],
+"spacebetween": false,
+"tables": true,
+"titleline": "{*Material*}"
 },
 {
 "fields": [
@@ -548,6 +548,7 @@
 "outputlines": [
 "Material:{*Material*}",
 "Ar (SCCM):{*Z400_Ar*}",
+"O2 (SCCM):{*Z400_O2*}",
 "Pres. (mbar):{*Z400_Pressure*}",
 "P eff. (W): {*Z400_Power*}",
 "DC (V): {*Z400_DCBias*}",
@@ -991,8 +992,8 @@
 "D_BAK640Other",
 "D_BAK640Oxide",
 "D_CL200Metal",
-"D_CL200Oxide",
 "D_CL200PulsedDC",
+"D_CL200RF",
 "D_Galvanic",
 "D_Z400Metal",
 "D_Z400Other",
@@ -1382,8 +1383,9 @@
 },
 {
 "children": [
+"4b23dc8dc00211edac3087a7ac4da096",
 "a02fa8e6bdb011edba50309c23d25aa5",
-"27e931b2bdf111ed9953a7ff4e30a158"
+"78447f09c00211eda19287a7ac4da096"
 ],
 "data": {
 "Date": "2023-02-20",
@@ -1391,14 +1393,6 @@
 },
 "format": "P_Deposition",
 "uid": "27e7018cb51a11ed9b26d319a877bc10"
-},
-{
-"children": [],
-"data": {
-"Material": "SiO2"
-},
-"format": "D_Z400Oxide",
-"uid": "27e931b2bdf111ed9953a7ff4e30a158"
 },
 {
 "children": [],
@@ -1480,6 +1474,19 @@
 },
 "format": "C_Journal",
 "uid": "486de0b5b5e111ed99edd319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Material": "W",
+"Z400_Ar": "10",
+"Z400_DCBias": "160",
+"Z400_Power": "50",
+"Z400_Pressure": "0.01",
+"Z400_Time": "10"
+},
+"format": "D_Z400Metal",
+"uid": "4b23dc8dc00211edac3087a7ac4da096"
 },
 {
 "children": [
@@ -1684,6 +1691,20 @@
 },
 "format": "G_Note_Cross",
 "uid": "74df6fdab5c711eda9d5d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Material": "Si",
+"Z400_Ar": "18",
+"Z400_DCBias": "320",
+"Z400_O2": "2",
+"Z400_Power": "150",
+"Z400_Pressure": "0.01",
+"Z400_Time": "635"
+},
+"format": "D_Z400Oxide",
+"uid": "78447f09c00211eda19287a7ac4da096"
 },
 {
 "children": [
