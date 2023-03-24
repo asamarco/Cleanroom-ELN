@@ -88,7 +88,7 @@
 "fields": [
 {
 "fieldname": "BAKMaterial",
-"fieldtype": "Text"
+"fieldtype": "AutoChoice"
 },
 {
 "fieldname": "BAKThickness",
@@ -116,7 +116,7 @@
 "fields": [
 {
 "fieldname": "BAKMaterial",
-"fieldtype": "Text"
+"fieldtype": "AutoChoice"
 },
 {
 "fieldname": "BAKThickness",
@@ -146,7 +146,7 @@
 "fields": [
 {
 "fieldname": "BAKMaterial",
-"fieldtype": "Text"
+"fieldtype": "AutoChoice"
 },
 {
 "fieldname": "BAKThickness",
@@ -177,8 +177,7 @@
 {
 "evalhtml": true,
 "fieldname": "Material",
-"fieldtype": "Choice",
-"format": "Ti/Pt"
+"fieldtype": "AutoChoice"
 },
 {
 "fieldname": "CL200_Time",
@@ -226,8 +225,7 @@
 {
 "evalhtml": true,
 "fieldname": "Material",
-"fieldtype": "Choice",
-"format": "Ti/Pt"
+"fieldtype": "AutoChoice"
 },
 {
 "fieldname": "CL200_Time",
@@ -306,8 +304,7 @@
 {
 "evalhtml": true,
 "fieldname": "Material",
-"fieldtype": "Choice",
-"format": "KNN"
+"fieldtype": "AutoChoice"
 },
 {
 "fieldname": "CL200_Time",
@@ -405,7 +402,7 @@
 "fields": [
 {
 "fieldname": "Material",
-"fieldtype": "Text"
+"fieldtype": "AutoChoice"
 },
 {
 "fieldname": "Z400_Ar",
@@ -456,7 +453,7 @@
 "fields": [
 {
 "fieldname": "Material",
-"fieldtype": "Text"
+"fieldtype": "AutoChoice"
 },
 {
 "fieldname": "Z400_Ar",
@@ -509,7 +506,7 @@
 "fields": [
 {
 "fieldname": "Material",
-"fieldtype": "Text"
+"fieldtype": "AutoChoice"
 },
 {
 "fieldname": "Z400_Ar",
@@ -842,6 +839,23 @@
 {
 "fields": [
 {
+"fieldname": "Dose",
+"fieldtype": "Number",
+"format": "#.##"
+}
+],
+"formathtml": true,
+"formatname": "L_Flood",
+"icon": "bulb",
+"outputlines": [
+"{*Dose*}mJ/cm2"
+],
+"spacebetween": false,
+"titleline": "Flood Exposure"
+},
+{
+"fields": [
+{
 "fieldname": "SonicationTime",
 "fieldtype": "Number",
 "format": "#.#"
@@ -1054,6 +1068,44 @@
 "init": "Now"
 },
 {
+"fieldname": "IBEAngle",
+"fieldtype": "Number",
+"format": "#"
+},
+{
+"fieldname": "IBEEnergy",
+"fieldtype": "Number",
+"format": "#"
+},
+{
+"fieldname": "IBECurrent",
+"fieldtype": "Number",
+"format": "#"
+},
+{
+"fieldname": "IBETime",
+"fieldtype": "Number",
+"format": "#"
+}
+],
+"formathtml": true,
+"formatname": "P_IBE",
+"icon": "minus",
+"outputlines": [
+"<b>{*Date*}</b> Ion Beam Etching ({*IBEEnergy*} V,{*IBECurrent*} mA) at angle {*IBEAngle*}\u00b0 for {*IBETime*} minutes."
+],
+"spacebetween": false,
+"titleline": "Ion Beam Etching"
+},
+{
+"fields": [
+{
+"fieldname": "Date",
+"fieldtype": "Date",
+"format": " %-d/%-m/%Y",
+"init": "Now"
+},
+{
 "fieldname": "Chemical",
 "fieldtype": "Text"
 },
@@ -1076,6 +1128,15 @@
 "titleline": "Resist removal"
 },
 {
+"childTypeLimit": [
+"G_Note",
+"L_Bake",
+"L_Development",
+"L_Exposure",
+"L_Flood",
+"L_Sonication",
+"L_SpinCoating"
+],
 "fields": [
 {
 "fieldname": "Date",
@@ -1264,6 +1325,18 @@
 "uid": "0fc0e134b5e311edb13bd319a877bc10"
 },
 {
+"children": [],
+"data": {
+"Date": "2023-02-24",
+"IBEAngle": "30",
+"IBECurrent": "50",
+"IBEEnergy": "200",
+"IBETime": "12"
+},
+"format": "P_IBE",
+"uid": "10340b4bca5111edbdb2309c23d25aa5"
+},
+{
 "children": [
 "0b93e17fb77111ed8856309c23d25aa5"
 ],
@@ -1315,6 +1388,18 @@
 },
 "format": "D_BAK640Oxide",
 "uid": "1bbb9d59b51211eda317d319a877bc10"
+},
+{
+"children": [
+"55069829ca4811edbbcb309c23d25aa5",
+"7ebfabebca4811edb08e309c23d25aa5"
+],
+"data": {
+"Date": "2023-02-20",
+"Method": "Evaporation"
+},
+"format": "P_Deposition",
+"uid": "1bcf5394ca4811ed87e7309c23d25aa5"
 },
 {
 "children": [
@@ -1457,6 +1542,12 @@
 },
 {
 "children": [],
+"data": {},
+"format": "L_Flood",
+"uid": "3947805cca4811eda692309c23d25aa5"
+},
+{
+"children": [],
 "data": {
 "Defoc": "0",
 "Dose": "240"
@@ -1504,6 +1595,7 @@
 "6de6eb81b60411ed845cd319a877bc10",
 "d663133ab60411edbcf4d319a877bc10",
 "42f5468cb60511eda7fed319a877bc10",
+"3947805cca4811eda692309c23d25aa5",
 "d8eaf4bab60511ed90c4d319a877bc10"
 ],
 "data": {
@@ -1517,7 +1609,7 @@
 "children": [],
 "data": {
 "Defoc": "0",
-"Dose": "120.0"
+"Dose": "40"
 },
 "format": "L_Exposure",
 "uid": "5394c81eb62111eda1e9d319a877bc10"
@@ -1527,6 +1619,8 @@
 "5394ef2eb62111ed848dd319a877bc10",
 "5394ef2fb62111ed87dfd319a877bc10",
 "5394c81eb62111eda1e9d319a877bc10",
+"6217df26ca4711ed960e309c23d25aa5",
+"dbddc315ca4711eda2f7309c23d25aa5",
 "5394ef30b62111ed9c31d319a877bc10"
 ],
 "data": {
@@ -1574,8 +1668,20 @@
 "uid": "55032c33b53611ed9445d319a877bc10"
 },
 {
+"children": [],
+"data": {
+"BAKMaterial": "SiO2",
+"BAKRate": "0.5",
+"BAKThickness": "100"
+},
+"format": "D_BAK640Oxide",
+"uid": "55069829ca4811edbbcb309c23d25aa5"
+},
+{
 "children": [
+"1bcf5394ca4811ed87e7309c23d25aa5",
 "5394c81fb62111ed820cd319a877bc10",
+"10340b4bca5111edbdb2309c23d25aa5",
 "d3f3cfebb55511edbb6fd319a877bc10",
 "d92c38c2ba7b11ed93e2fe50e5164240",
 "bfad2b40ba7d11ed8afffe50e5164240"
@@ -1605,6 +1711,15 @@
 },
 "format": "G_Page",
 "uid": "5fb1f315b5e811ed9308d319a877bc10"
+},
+{
+"children": [],
+"data": {
+"BakeTemp": "115",
+"BakeTime": "90"
+},
+"format": "L_Bake",
+"uid": "6217df26ca4711ed960e309c23d25aa5"
 },
 {
 "children": [],
@@ -1705,6 +1820,16 @@
 },
 "format": "D_Z400Oxide",
 "uid": "78447f09c00211eda19287a7ac4da096"
+},
+{
+"children": [],
+"data": {
+"BAKMaterial": "NiFe",
+"BAKRate": "0.1",
+"BAKThickness": "30"
+},
+"format": "D_BAK640Metal",
+"uid": "7ebfabebca4811edb08e309c23d25aa5"
 },
 {
 "children": [
@@ -2003,6 +2128,12 @@
 },
 "format": "P_LiftOff",
 "uid": "d92c38c2ba7b11ed93e2fe50e5164240"
+},
+{
+"children": [],
+"data": {},
+"format": "L_Flood",
+"uid": "dbddc315ca4711eda2f7309c23d25aa5"
 },
 {
 "children": [],
