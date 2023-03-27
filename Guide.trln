@@ -861,6 +861,9 @@
 "titleline": "Flood Exposure"
 },
 {
+"childTypeLimit": [
+"G_Note"
+],
 "fields": [
 {
 "fieldname": "SonicationTime",
@@ -926,6 +929,14 @@
 "titleline": "Spin Coating {*SpinSpeed*}"
 },
 {
+"childTypeLimit": [
+"G_Boolean",
+"G_File",
+"G_Image",
+"G_Note",
+"G_Page",
+"G_Value"
+],
 "fields": [
 {
 "fieldname": "Date",
@@ -947,6 +958,13 @@
 "titleline": "{*MetrologyType*}"
 },
 {
+"childTypeLimit": [
+"G_Boolean",
+"G_File",
+"G_Note",
+"G_Page",
+"G_Value"
+],
 "fields": [
 {
 "fieldname": "Date",
@@ -976,6 +994,9 @@
 "titleline": "{*MicroscopyType*} microscopy"
 },
 {
+"childTypeLimit": [
+"G_Note"
+],
 "fields": [
 {
 "fieldname": "Date",
@@ -1025,7 +1046,10 @@
 "D_Galvanic",
 "D_Z400Metal",
 "D_Z400Other",
-"D_Z400Oxide"
+"D_Z400Oxide",
+"G_Note",
+"L_Bake",
+"L_SpinCoating"
 ],
 "fields": [
 {
@@ -1050,6 +1074,10 @@
 "titleline": "{*Method*}"
 },
 {
+"childTypeLimit": [
+"G_Note",
+"S_Dice"
+],
 "childtype": "S_Dice",
 "fields": [
 {
@@ -1074,6 +1102,9 @@
 "titleline": "{*DicingType*} dicing"
 },
 {
+"childTypeLimit": [
+"G_Note"
+],
 "fields": [
 {
 "fieldname": "Date",
@@ -1112,6 +1143,10 @@
 "titleline": "Ion Beam Etching"
 },
 {
+"childTypeLimit": [
+"G_Note",
+"L_Sonication"
+],
 "fields": [
 {
 "fieldname": "Date",
@@ -1175,6 +1210,9 @@
 "titleline": "Lithography"
 },
 {
+"childTypeLimit": [
+"G_Note"
+],
 "fields": [
 {
 "fieldname": "Date",
@@ -1217,6 +1255,9 @@
 "titleline": "Plasma {*PlasmaGas*} {*PlasmaPower*}"
 },
 {
+"childTypeLimit": [
+"G_Note"
+],
 "fields": [
 {
 "fieldname": "Date",
@@ -1249,6 +1290,19 @@
 "titleline": "{*Chemical*} Wet Etch"
 },
 {
+"childTypeLimit": [
+"G_Note",
+"M_Generic",
+"M_Microscopy",
+"P_Annealing",
+"P_Deposition",
+"P_Dicing",
+"P_IBE",
+"P_LiftOff",
+"P_Lithography",
+"P_Plasma",
+"P_WetEtch"
+],
 "fields": [
 {
 "fieldname": "Name",
@@ -1274,6 +1328,19 @@
 "titleline": "{*Name*} {*Tag*}"
 },
 {
+"childTypeLimit": [
+"G_Note",
+"M_Generic",
+"M_Microscopy",
+"P_Annealing",
+"P_Deposition",
+"P_Dicing",
+"P_IBE",
+"P_LiftOff",
+"P_Lithography",
+"P_Plasma",
+"P_WetEtch"
+],
 "fields": [
 {
 "fieldname": "Name",
@@ -1437,6 +1504,7 @@
 "d3f3cfe7b55511ed9fedd319a877bc10",
 "d3c9b6bdb53b11edb12fd319a877bc10",
 "c9ac97c0b5e511ed9e78d319a877bc10",
+"aa17a3e8cc8c11eda86a309c23d25aa5",
 "e0a5236eb53411ed88a9d319a877bc10",
 "e0f92f56b68011ed93bb309c23d25aa5",
 "1251bf66b62011ed8e04d319a877bc10",
@@ -1971,6 +2039,18 @@
 },
 "format": "D_Z400Other",
 "uid": "a02fa8e6bdb011edba50309c23d25aa5"
+},
+{
+"children": [],
+"data": {
+"Date": "2023-02-24",
+"IBEAngle": "30",
+"IBECurrent": "50",
+"IBEEnergy": "200",
+"IBETime": "12"
+},
+"format": "P_IBE",
+"uid": "aa17a3e8cc8c11eda86a309c23d25aa5"
 },
 {
 "children": [],
