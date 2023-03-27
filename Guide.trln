@@ -1259,6 +1259,10 @@
 "fieldname": "Substrate",
 "fieldtype": "Choice",
 "format": "Dummy/Prime Si/Thermal Oxide/Glass/Quartz/Ceramic/Metal"
+},
+{
+"fieldname": "Tag",
+"fieldtype": "AutoChoice"
 }
 ],
 "formathtml": true,
@@ -1267,7 +1271,7 @@
 "outputlines": [
 "<b>{*Name*}</b> ({*Substrate*})"
 ],
-"titleline": "{*Name*}"
+"titleline": "{*Name*} {*Tag*}"
 },
 {
 "fields": [
@@ -1284,6 +1288,10 @@
 "fieldname": "Substrate",
 "fieldtype": "Choice",
 "format": "Dummy/Prime Si/Thermal Oxide/Glass/Quartz/Ceramic/Metal"
+},
+{
+"fieldname": "Tag",
+"fieldtype": "AutoChoice"
 }
 ],
 "formathtml": true,
@@ -1292,7 +1300,7 @@
 "outputlines": [
 "<b>{*Name*}</b>: Lasermark <b>{*Lasermark*}</b> ({*Substrate*})"
 ],
-"titleline": "{*Name*}"
+"titleline": "{*Name*} {*Tag*}"
 }
 ],
 "nodes": [
@@ -1902,7 +1910,8 @@
 "data": {
 "Lasermark": "6NC2",
 "Name": "Wafer",
-"Substrate": "Prime Si"
+"Substrate": "Prime Si",
+"Tag": ""
 },
 "format": "S_Wafer",
 "uid": "8e49b104b5e411ed842bd319a877bc10"
