@@ -93,7 +93,8 @@
 {
 "fieldname": "BAKThickness",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#.##",
+"suffix": " nm"
 },
 {
 "fieldname": "BAKRate",
@@ -105,12 +106,12 @@
 "formatname": "D_BAK640Metal",
 "outputlines": [
 "Material:{*BAKMaterial*}",
-"t(nm):{*BAKThickness*}",
+"thickness:{*BAKThickness*}",
 "rate (nm/s):{*BAKRate*}"
 ],
 "spacebetween": false,
 "tables": true,
-"titleline": "{*BAKMaterial*}"
+"titleline": "{*BAKMaterial*} {*BAKThickness*}"
 },
 {
 "fields": [
@@ -121,7 +122,8 @@
 {
 "fieldname": "BAKThickness",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#.##",
+"suffix": " nm"
 },
 {
 "fieldname": "BAKRate",
@@ -135,12 +137,12 @@
 "icon": "bullet_2",
 "outputlines": [
 "Material:{*BAKMaterial*}",
-"t(nm):{*BAKThickness*}",
+"thickness:{*BAKThickness*}",
 "rate (nm/s):{*BAKRate*}"
 ],
 "spacebetween": false,
 "tables": true,
-"titleline": "{*BAKMaterial*}"
+"titleline": "{*BAKMaterial*} {*BAKThickness*}"
 },
 {
 "fields": [
@@ -151,7 +153,8 @@
 {
 "fieldname": "BAKThickness",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#.##",
+"suffix": " nm"
 },
 {
 "fieldname": "BAKRate",
@@ -165,12 +168,12 @@
 "icon": "bullet_1",
 "outputlines": [
 "Material:{*BAKMaterial*}",
-"t(nm):{*BAKThickness*}",
+"thickness:{*BAKThickness*}",
 "rate (nm/s):{*BAKRate*}"
 ],
 "spacebetween": false,
 "tables": true,
-"titleline": "{*BAKMaterial*}"
+"titleline": "{*BAKMaterial*} {*BAKThickness*}"
 },
 {
 "fields": [
@@ -780,46 +783,50 @@
 {
 "fieldname": "BakeTemp",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#.##",
+"suffix": "\u00b0C"
 },
 {
 "fieldname": "BakeTime",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#.##",
+"suffix": " s"
 }
 ],
 "formathtml": true,
 "formatname": "L_Bake",
-"icon": "round_plus",
+"icon": "fire",
 "outputlines": [
-"Bake {*BakeTemp*}\u00b0C, {*BakeTime*}s"
+"Bake {*BakeTemp*}, {*BakeTime*}"
 ],
 "spacebetween": false,
-"titleline": "Bake {*BakeTime*}s"
+"titleline": "Bake {*BakeTemp*} {*BakeTime*}"
 },
 {
 "fields": [
 {
 "fieldname": "DevelopmentTime",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#.##",
+"suffix": " s"
 }
 ],
 "formathtml": true,
 "formatname": "L_Development",
 "icon": "clock",
 "outputlines": [
-"Development {*DevelopmentTime*}s"
+"Development {*DevelopmentTime*}"
 ],
 "spacebetween": false,
-"titleline": "Development {*DevelopmentTime*}s"
+"titleline": "Development {*DevelopmentTime*}"
 },
 {
 "fields": [
 {
 "fieldname": "Dose",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#.##",
+"suffix": " mJ/cm2"
 },
 {
 "fieldname": "Defoc",
@@ -831,10 +838,10 @@
 "formatname": "L_Exposure",
 "icon": "bulb",
 "outputlines": [
-"Exposure {*Dose*}mJ/cm2, Defoc {*Defoc*}"
+"Exposure {*Dose*}, Defoc {*Defoc*}"
 ],
 "spacebetween": false,
-"titleline": "Exposure {*Dose*} mJ/cm2"
+"titleline": "Exposure {*Dose*}"
 },
 {
 "fields": [
@@ -858,28 +865,31 @@
 {
 "fieldname": "SonicationTime",
 "fieldtype": "Number",
-"format": "#.#"
+"format": "#.#",
+"suffix": " min"
 },
 {
 "fieldname": "SonicationPower",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#.##",
+"suffix": "%"
 },
 {
 "fieldname": "SonicationTemp",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#.##",
+"suffix": "\u00b0C"
 }
 ],
 "formatname": "L_Sonication",
 "icon": "music",
 "outputlines": [
-"Sonication {*SonicationTime*} min",
-"Power: {*SonicationPower*}%",
-"Temperature: {*SonicationTemp*}\u00b0C"
+"Sonication {*SonicationTime*}",
+"Power: {*SonicationPower*}",
+"Temperature: {*SonicationTemp*}"
 ],
 "spacebetween": false,
-"titleline": "Sonication {*SonicationTime*} min"
+"titleline": "Sonication {*SonicationTime*}"
 },
 {
 "fields": [
@@ -890,27 +900,30 @@
 {
 "fieldname": "SpinSpeed",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#",
+"suffix": " rpm"
 },
 {
 "fieldname": "SpinAcceleration",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#",
+"suffix": " rpm/s"
 },
 {
 "fieldname": "SpinTime",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#",
+"suffix": " s"
 }
 ],
 "formathtml": true,
 "formatname": "L_SpinCoating",
 "icon": "round_plus",
 "outputlines": [
-"Spin Coating of {*Polymer*}: {*SpinSpeed*} rpm, {*SpinTime*}s (acc. {*SpinAcceleration*}rpm/s)"
+"Spin Coating of {*Polymer*}: {*SpinSpeed*}, {*SpinTime*} (acc. {*SpinAcceleration*})"
 ],
 "spacebetween": false,
-"titleline": "Spin Coating {*SpinSpeed*} rpm"
+"titleline": "Spin Coating {*SpinSpeed*}"
 },
 {
 "fields": [
@@ -973,17 +986,19 @@
 {
 "fieldname": "AnnealingTemperature",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#.##",
+"suffix": "\u00b0C"
 },
 {
 "fieldname": "AnnealingTime",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#.##",
+"suffix": " min"
 },
 {
 "fieldname": "AnnealingType",
 "fieldtype": "Choice",
-"format": "RTP/Muffle/Oven/Tube"
+"format": "RTP/Muffle furnace/Oven/Tube furnace"
 },
 {
 "fieldname": "AnnealingAthmosphere",
@@ -993,12 +1008,11 @@
 ],
 "formathtml": true,
 "formatname": "P_Annealing",
-"icon": "rocket",
+"icon": "temperature-high",
 "outputlines": [
-"<b>{*Date*}</b> {*AnnealingType*} treatment at {*AnnealingTemperature*}\u00b0C for {*AnnealingTime*} m in {*AnnealingAthmosphere*}"
+"<b>{*Date*}</b> {*AnnealingType*} treatment at {*AnnealingTemperature*} for {*AnnealingTime*} in {*AnnealingAthmosphere*}"
 ],
-"spacebetween": false,
-"titleline": "Thermal treatment"
+"titleline": "{*AnnealingType*} {*AnnealingTemperature*} {*AnnealingTime*}"
 },
 {
 "childTypeLimit": [
@@ -1111,11 +1125,13 @@
 },
 {
 "fieldname": "LiftOffTemperature",
-"fieldtype": "Text"
+"fieldtype": "Text",
+"suffix": "\u00b0C"
 },
 {
 "fieldname": "LiftOffTime",
-"fieldtype": "Text"
+"fieldtype": "Text",
+"suffix": " min"
 }
 ],
 "formathtml": true,
@@ -1169,7 +1185,8 @@
 {
 "fieldname": "PlasmaPower",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#.##",
+"suffix": " W"
 },
 {
 "fieldname": "PlasmaGas",
@@ -1180,12 +1197,14 @@
 {
 "fieldname": "PlasmaPressure",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#.##",
+"suffix": " mbar"
 },
 {
 "fieldname": "PlasmaTime",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#.##",
+"suffix": " min"
 }
 ],
 "formathtml": true,
@@ -1195,7 +1214,7 @@
 "<b>{*Date*}</b> Plasma {*PlasmaPower*}W, {*PlasmaTime*} min in {*PlasmaPressure*} mbar of {*PlasmaGas*}"
 ],
 "spacebetween": false,
-"titleline": "Plasma {*PlasmaGas*} {*PlasmaPower*}W"
+"titleline": "Plasma {*PlasmaGas*} {*PlasmaPower*}"
 },
 {
 "fields": [
@@ -1211,21 +1230,23 @@
 },
 {
 "fieldname": "WetEtchTemperature",
-"fieldtype": "Text"
+"fieldtype": "Text",
+"suffix": "\u00b0C"
 },
 {
 "fieldname": "WetEtchTime",
-"fieldtype": "Text"
+"fieldtype": "Text",
+"suffix": " min"
 }
 ],
 "formathtml": true,
 "formatname": "P_WetEtch",
 "icon": "minus",
 "outputlines": [
-"<b>{*Date*}</b> Wet etched in {*Chemical*} at {*WetEtchTemperature*}\u00b0C for {*WetEtchTime*} minutes"
+"<b>{*Date*}</b> Wet etched in {*Chemical*} at {*WetEtchTemperature*} for {*WetEtchTime*}"
 ],
 "spacebetween": false,
-"titleline": "Wet Etch"
+"titleline": "{*Chemical*} Wet Etch"
 },
 {
 "fields": [
@@ -1595,8 +1616,8 @@
 "6de6eb81b60411ed845cd319a877bc10",
 "d663133ab60411edbcf4d319a877bc10",
 "42f5468cb60511eda7fed319a877bc10",
-"3947805cca4811eda692309c23d25aa5",
-"d8eaf4bab60511ed90c4d319a877bc10"
+"d8eaf4bab60511ed90c4d319a877bc10",
+"3947805cca4811eda692309c23d25aa5"
 ],
 "data": {
 "Date": "2023-02-22",
@@ -1653,7 +1674,7 @@
 {
 "children": [],
 "data": {
-"DevelopmentTime": "45"
+"DevelopmentTime": "45.0"
 },
 "format": "L_Development",
 "uid": "5394ef30b62111ed9c31d319a877bc10"
@@ -1911,6 +1932,7 @@
 "children": [],
 "data": {
 "Date": "2023-02-23",
+"Images": "<a href=\"Data/Images\">Images</a>",
 "MicroscopyType": "Electron"
 },
 "format": "M_Microscopy",
@@ -1978,7 +2000,7 @@
 "children": [],
 "data": {
 "SonicationPower": "70",
-"SonicationTemp": "",
+"SonicationTemp": "21",
 "SonicationTime": "1"
 },
 "format": "L_Sonication",
@@ -2039,7 +2061,7 @@
 "data": {
 "AnnealingAthmosphere": "Vacuum",
 "AnnealingTemperature": "600",
-"AnnealingTime": "60",
+"AnnealingTime": "1",
 "AnnealingType": "RTP",
 "Date": "2023-02-23"
 },
@@ -2147,7 +2169,7 @@
 {
 "children": [],
 "data": {
-"Chemical": "HF 40%",
+"Chemical": "Chemical",
 "Date": "2023-02-28",
 "WetEtchTemperature": "21",
 "WetEtchTime": "2"
