@@ -207,6 +207,12 @@
 "fieldtype": "Number",
 "format": "#.##",
 "init": "500.0"
+},
+{
+"fieldname": "Cl200_Thickness",
+"fieldtype": "Number",
+"format": "#.##",
+"suffix": " nm"
 }
 ],
 "formathtml": true,
@@ -221,7 +227,7 @@
 ],
 "spacebetween": false,
 "tables": true,
-"titleline": "{*Material*}"
+"titleline": "{*Material*} {*Cl200_Thickness*}"
 },
 {
 "fields": [
@@ -764,7 +770,7 @@
 {
 "fieldname": "Value",
 "fieldtype": "Number",
-"format": "#. #############"
+"format": "#.#############"
 },
 {
 "fieldname": "Unit",
@@ -937,6 +943,7 @@
 "G_Page",
 "G_Value"
 ],
+"childtype": "G_Value",
 "fields": [
 {
 "fieldname": "Date",
@@ -997,6 +1004,7 @@
 "childTypeLimit": [
 "G_Note"
 ],
+"childtype": "G_Note",
 "fields": [
 {
 "fieldname": "Date",
@@ -1019,7 +1027,7 @@
 {
 "fieldname": "AnnealingType",
 "fieldtype": "Choice",
-"format": "RTP/Muffle furnace/Oven/Tube furnace"
+"format": "RTP/Muffle furnace/Oven/Tube furnace/In situ"
 },
 {
 "fieldname": "AnnealingAthmosphere",
@@ -1105,6 +1113,7 @@
 "childTypeLimit": [
 "G_Note"
 ],
+"childtype": "G_Note",
 "fields": [
 {
 "fieldname": "Date",
@@ -1258,6 +1267,7 @@
 "childTypeLimit": [
 "G_Note"
 ],
+"childtype": "G_Note",
 "fields": [
 {
 "fieldname": "Date",
@@ -1311,7 +1321,7 @@
 },
 {
 "fieldname": "Substrate",
-"fieldtype": "OneLineText"
+"fieldtype": "AutoChoice"
 },
 {
 "fieldname": "Tag",
@@ -1352,8 +1362,7 @@
 },
 {
 "fieldname": "Substrate",
-"fieldtype": "Choice",
-"format": "Dummy/Prime Si/Thermal Oxide/Glass/Quartz/Ceramic/Metal"
+"fieldtype": "AutoChoice"
 },
 {
 "fieldname": "Tag",
@@ -1776,6 +1785,7 @@
 {
 "children": [
 "1bcf5394ca4811ed87e7309c23d25aa5",
+"bdd0dc65ccae11edaab3309c23d25aa5",
 "5394c81fb62111ed820cd319a877bc10",
 "10340b4bca5111edbdb2309c23d25aa5",
 "d3f3cfebb55511edbb6fd319a877bc10",
@@ -1820,7 +1830,7 @@
 {
 "children": [],
 "data": {
-"Caption": "Examples of processes",
+"Caption": "Examples of processes collapsed and expanded to show substeps",
 "Image": "<img src=\"Pictures/Guide/processes.png\" />"
 },
 "format": "G_Image",
@@ -2095,6 +2105,17 @@
 "uid": "bd352fe2ba7f11edbde3fe50e5164240"
 },
 {
+"children": [
+"cc8358f6ccae11eda863309c23d25aa5"
+],
+"data": {
+"Date": "2023-02-20",
+"MetrologyType": "Resistivity"
+},
+"format": "M_Generic",
+"uid": "bdd0dc65ccae11edaab3309c23d25aa5"
+},
+{
 "children": [],
 "data": {
 "Date": "2023-03-02",
@@ -2123,6 +2144,16 @@
 },
 "format": "P_Deposition",
 "uid": "cad636f0b55911edbe3ed319a877bc10"
+},
+{
+"children": [],
+"data": {
+"Tag": "Sheet resistance",
+"Unit": "mOhm/sq",
+"Value": "12"
+},
+"format": "G_Value",
+"uid": "cc8358f6ccae11eda863309c23d25aa5"
 },
 {
 "children": [
