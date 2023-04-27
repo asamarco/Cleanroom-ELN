@@ -1473,6 +1473,18 @@
 "uid": "17196345b51411eda80ad319a877bc10"
 },
 {
+"children": [
+"2b6c5f0fe43311edac2d309c23d25aa5",
+"c84f582fe43711ed9822309c23d25aa5",
+"8ff90d41e44411ed90ce309c23d25aa5"
+],
+"data": {
+"Name": "Collaboration and file sharing"
+},
+"format": "C_Journal",
+"uid": "1747f7fbe43311ed8f48309c23d25aa5"
+},
+{
 "children": [],
 "data": {
 "Caption": "Child Type Limits for Deposition",
@@ -1587,6 +1599,15 @@
 {
 "children": [],
 "data": {
+"Name": "A word of caution",
+"Text": "As everything in the \"database\" is strored in the treeline file and related files linked with relative paths to it, it could be tempting to just place everything on dropbox/onedrive/gdrive/whatever shared folder and use it just as it is.<br />Although this would generally work, it is as risky approach. Nothing prevents two people to access the files at the same time for modifications. On the above mentioned services this would leave behind some conflicting copies of the file and which afterwards need to be analyzed to see what to keep and what to delete (at least data should not be lost into nothing).<br /><br />This is not of course the best approach and this kind of problem is typically avoided using some version control software (CVS) to track files and eventually detect and manage conflicts automatically (or at least guide you in the merging of conflicting files). As an added benefit a CVS can be used to revert at any previous point in the history and display a graphical timeline of all the modications done (commited).<br /><br />There are many CVS softwares around, for software developent GIT is surely dominating the scene as of 2023 and could be used with treeline as well. This same guide is hosted on Github and was written using GIT as CVS.<br />Nevertheless for realistic applications in a lab I strongly suggest to set up Subversion for two main reasons:<br /><br /><br />- Subversion handles binary filese (everything non-text) better than git and most likely more than 99% the database will consist of binary files<br />- Subversion has some easy to use interfaces that allow to use SVN directly from the file manager (tortoiseSVN on windows, Thunar+VCS plugin on Linux) if not willing to use the terminal"
+},
+"format": "G_Page",
+"uid": "2b6c5f0fe43311edac2d309c23d25aa5"
+},
+{
+"children": [],
+"data": {
 "Link": "<a href=\"Pictures/Guide/\">Data Folder</a>",
 "Name": "Ellipsometry data"
 },
@@ -1596,7 +1617,8 @@
 {
 "children": [
 "7f0f2257b50011ed83a5d319a877bc10",
-"486de0b5b5e111ed99edd319a877bc10"
+"486de0b5b5e111ed99edd319a877bc10",
+"1747f7fbe43311ed8f48309c23d25aa5"
 ],
 "data": {
 "Element_Data": "Guides"
@@ -1996,6 +2018,15 @@
 {
 "children": [],
 "data": {
+"Name": "Use of Subversion",
+"Text": "in a console the main commands would be<br /><br />svn checkout - to extract for the first time a repository (run una-tantum)<br />svn update - to sync the local copy with what is present in the server<br />svn add - to include new files in the version control<br />svn commit - to upload modifications to the central server<br />svn merge - to handle the case in which t"
+},
+"format": "G_Page",
+"uid": "8ff90d41e44411ed90ce309c23d25aa5"
+},
+{
+"children": [],
+"data": {
 "AnnealingAthmosphere": "Vacuum",
 "AnnealingTemperature": "600",
 "AnnealingTime": "60",
@@ -2124,6 +2155,15 @@
 },
 "format": "M_Microscopy",
 "uid": "bfad2b40ba7d11ed8afffe50e5164240"
+},
+{
+"children": [],
+"data": {
+"Name": "Set up of of subversion",
+"Text": "Subversion (svn) uses a master <b>repository</b> somewhere (a server accessible over internet or local network), all the people working on it have their own local copy (a <b>checkout</b> of the repository) that they can work on normally and send back the modification to the server (<b>commit</b>).<br /><br />The first important decision is where to host the server. On local network you can just use any PC with network folder. Just install svn and follow the documentation to create a repository with few commands. If instead you want to have it on the internet you either have to: <br />- deploy svn on a server with public IP (or self-host some graphical manager for it, for instance i use <a href=\"https://scm-manager.org\">scm-manager</a>) and maintain it in working conditions. <br />- use a third party hosting service. There could be several options, also for free but typically with a limited space (e.g. https://riouxsvn.com, https://sliksvn.com/ and others) with paid upgrades.<br /><br />Whatever the solution it would be nice to have periodic backups of the repository but also in the worst case scenario every user should have a recent local copy of all the files so that even if the server svn is completely lost for whatever reason the files are saved and only the \"history\" of the database gets lost and a new repository can be started from the last revision available.<br /><br />Once the server is set, use svn on a personal device to checkout the empty repository, add the files and proceed to the first commit!<br />"
+},
+"format": "G_Page",
+"uid": "c84f582fe43711ed9822309c23d25aa5"
 },
 {
 "children": [],
