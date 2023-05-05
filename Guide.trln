@@ -1124,29 +1124,33 @@
 {
 "fieldname": "IBEAngle",
 "fieldtype": "Number",
-"format": "#"
+"format": "#",
+"suffix": "\u00b0"
 },
 {
 "fieldname": "IBEEnergy",
 "fieldtype": "Number",
-"format": "#"
+"format": "#",
+"suffix": " V"
 },
 {
 "fieldname": "IBECurrent",
 "fieldtype": "Number",
-"format": "#"
+"format": "#",
+"suffix": " mA"
 },
 {
 "fieldname": "IBETime",
 "fieldtype": "Number",
-"format": "#"
+"format": "#",
+"suffix": " min"
 }
 ],
 "formathtml": true,
 "formatname": "P_IBE",
 "icon": "minus",
 "outputlines": [
-"<b>{*Date*}</b> Ion Beam Etching ({*IBEEnergy*} V,{*IBECurrent*} mA) at angle {*IBEAngle*}\u00b0 for {*IBETime*} minutes."
+"<b>{*Date*}</b> Ion Beam Etching ({*IBEEnergy*} V,{*IBECurrent*} mA) at angle {*IBEAngle*} for {*IBETime*}."
 ],
 "spacebetween": false,
 "titleline": "Ion Beam Etching"
@@ -1182,7 +1186,7 @@
 "formatname": "P_LiftOff",
 "icon": "round_minus",
 "outputlines": [
-"<b>{*Date*}</b> Resist removal in {*Chemical*} at {*LiftOffTemperature*}\u00b0C for {*LiftOffTime*} minutes"
+"<b>{*Date*}</b> Resist removal in {*Chemical*} at {*LiftOffTemperature*} for {*LiftOffTime*}."
 ],
 "spacebetween": false,
 "titleline": "Resist removal"
@@ -2117,7 +2121,7 @@
 "children": [],
 "data": {
 "Name": "Data Types",
-"Text": "The data structure is completely configurable, after you get familiar with the examples, you can modify and/or add data types with Data -&gt; Configure Data Types according to your needs.<br />Please refer to the documentation for more details on Data Types, configuration of fields and outputs. The complete Treeline manual can be found under the Help menu.<br /><br />Some suggestions to maintain consistency in modified databases:<br /><br />1) Icons if possible should keep<br /><br /><b>+</b> for additive process<br /><b>-</b> for removal process<br /><br /><span style=\"color:#0000ff\">Blue</span> = metals<br /><span style=\"color:#ff0000\">Red</span> = oxides<br /><span style=\"color:#005500\">Green</span> = semiconductors/nitrides/sulfides/others<br /><br />2) The Data type should follow a naming like<br /><br />X_NameOfNewType<br /><br />where X:<br /><br />C: Container (Journals, Samples)<br />S: Sample (Wafer,Dice)<br />G: Generic (Page, Image, Note, File) <br /><br />First level process:<br />P: Process<br />M: Metrology<br /><br />Second level process:<br />D for Deposition<br />L for Lithography<br />E for Etch<br />...<br /><br /><b>Important:</b> Even though treeline does not really force any strong restriction it is a good practice to set legitimate Child Type Limits (in Type config, under advanced options). For example if you create a new process you will have to add it as legitimate for Wafers and/or Dices. See image below.<br /><br />"
+"Text": "The data structure is completely configurable, after you get familiar with the examples, you can modify and/or add data types with Data -&gt; Configure Data Types according to your needs.<br />Please refer to the documentation for more details on Data Types, configuration of fields and outputs. The complete Treeline manual can be found under the Help menu.<br /><br />Some suggestions to maintain consistency in modified databases:<br /><br />1) use Suffix field in the Field confic to specify measurement units. Use a leading white space where appropriate (e.g. \" kV\") to have the expected output.<br /><br />2) Icons if possible should keep<br /><br /><b>+</b> for additive process<br /><b>-</b> for removal process<br /><br /><span style=\"color:#0000ff\">Blue</span> = metals<br /><span style=\"color:#ff0000\">Red</span> = oxides<br /><span style=\"color:#005500\">Green</span> = semiconductors/nitrides/sulfides/others<br /><br />3) The Data type should follow a naming like<br /><br />X_NameOfNewType<br /><br />where X:<br /><br />C: Container (Journals, Samples)<br />S: Sample (Wafer,Dice)<br />G: Generic (Page, Image, Note, File) <br /><br />First level process:<br />P: Process<br />M: Metrology<br /><br />Second level process:<br />D for Deposition<br />L for Lithography<br />E for Etch<br />...<br /><br /><b>Important:</b> Even though treeline does not really force any strong restriction, it is a good practice to set legitimate Child Type Limits (in Type config, under advanced options). For example if you create a new process you will have to add it as legitimate for Wafers and/or Dices. See image below.<br /><br />"
 },
 "format": "G_Page",
 "uid": "b123b71fb5c711ed8565d319a877bc10"
