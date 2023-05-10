@@ -1,5 +1,5 @@
-# TCT
- Treeline Cleanroom Template for https://github.com/doug-101/TreeLine
+# Cleanrooom ELN
+ A Template for https://github.com/doug-101/TreeLine
  
  This template for TreeLine helps you organize a process database with a specific eye to R&D in microfabrication and material science (but adaptable to any other area).
  It can be considered an alternative Electronic Lab Notebook (ELN) with the following advantages:
