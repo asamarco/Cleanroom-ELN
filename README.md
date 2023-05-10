@@ -11,3 +11,10 @@
 * No need for paying or hosting a web service.
 	
 ![User Interface](Pictures/Screen.png)
+
+## Usage
+
+* Install https://treeline.bellz.org
+* Download the files in this repository
+* (Optional) add files from Extra Icons to the icons/tree folder of your Treeline install
+* Open Guide.trln for help pages, basic templates and examples.
