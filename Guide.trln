@@ -782,7 +782,7 @@
 "outputlines": [
 "{*Tag*}: {*Value*} {*Unit*}"
 ],
-"titleline": "{*Tag*}"
+"titleline": "{*Tag*}: {*Value*} {*Unit*}"
 },
 {
 "fields": [
@@ -1676,6 +1676,15 @@
 },
 {
 "children": [],
+"data": {
+"Caption": "Map",
+"Image": "<img src=\"Data/Example Wafer Box/Wafer1/Map.png\" />"
+},
+"format": "G_Image",
+"uid": "38d51c96ef0611edb856309c23d25aa5"
+},
+{
+"children": [],
 "data": {},
 "format": "L_Flood",
 "uid": "3947805cca4811eda692309c23d25aa5"
@@ -1743,7 +1752,7 @@
 ],
 "data": {
 "Date": "2023-02-22",
-"Mask": "<a href=\"Masks/resolution_test.gds\">resolution_test.gds</a>"
+"Mask": "<a href=\"Data/Masks/resolution_test.gds\">resolution_test.gds</a>"
 },
 "format": "P_Lithography",
 "uid": "4e78186fb51a11ed9b0bd319a877bc10"
@@ -1776,7 +1785,7 @@
 {
 "children": [],
 "data": {
-"Polymer": "AZ1518",
+"Polymer": "AZ5214E",
 "SpinAcceleration": "500.0",
 "SpinSpeed": "5000",
 "SpinTime": "60"
@@ -2073,6 +2082,16 @@
 {
 "children": [],
 "data": {
+"Tag": "Uniformity",
+"Unit": "%",
+"Value": "2.3"
+},
+"format": "G_Value",
+"uid": "96cce035ef0311edae45309c23d25aa5"
+},
+{
+"children": [],
+"data": {
 "Date": "2023-02-23",
 "Images": "<a href=\"Data/Images\">Images</a>",
 "MicroscopyType": "Electron"
@@ -2162,7 +2181,9 @@
 },
 {
 "children": [
-"cc8358f6ccae11eda863309c23d25aa5"
+"cc8358f6ccae11eda863309c23d25aa5",
+"96cce035ef0311edae45309c23d25aa5",
+"38d51c96ef0611edb856309c23d25aa5"
 ],
 "data": {
 "Date": "2023-02-20",
@@ -2175,7 +2196,7 @@
 "children": [],
 "data": {
 "Date": "2023-03-02",
-"Images": "<a href=\"Data/Images\">Images</a>",
+"Images": "<a href=\"Data/Example Wafer Box/Wafer1/Images/\">Images</a>",
 "MicroscopyType": "Optical"
 },
 "format": "M_Microscopy",
