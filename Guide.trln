@@ -1152,7 +1152,6 @@
 "outputlines": [
 "<b>{*Date*}</b> Ion Beam Etching ({*IBEEnergy*} V,{*IBECurrent*} mA) at angle {*IBEAngle*} for {*IBETime*}."
 ],
-"spacebetween": false,
 "titleline": "Ion Beam Etching"
 },
 {
@@ -1400,6 +1399,17 @@
 },
 "format": "G_Page",
 "uid": "05a9c119b50911edb57cd319a877bc10"
+},
+{
+"children": [
+"38d51c96ef0611edb856309c23d25aa5"
+],
+"data": {
+"Date": "2023-02-24",
+"MetrologyType": "Reflectometry"
+},
+"format": "M_Generic",
+"uid": "083677b1ef0c11edb0eb309c23d25aa5"
 },
 {
 "children": [],
@@ -1835,6 +1845,7 @@
 "bdd0dc65ccae11edaab3309c23d25aa5",
 "5394c81fb62111ed820cd319a877bc10",
 "10340b4bca5111edbdb2309c23d25aa5",
+"083677b1ef0c11edb0eb309c23d25aa5",
 "d3f3cfebb55511edbb6fd319a877bc10",
 "d92c38c2ba7b11ed93e2fe50e5164240",
 "bfad2b40ba7d11ed8afffe50e5164240"
@@ -2182,8 +2193,7 @@
 {
 "children": [
 "cc8358f6ccae11eda863309c23d25aa5",
-"96cce035ef0311edae45309c23d25aa5",
-"38d51c96ef0611edb856309c23d25aa5"
+"96cce035ef0311edae45309c23d25aa5"
 ],
 "data": {
 "Date": "2023-02-20",
