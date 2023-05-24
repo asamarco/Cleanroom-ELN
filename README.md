@@ -1,4 +1,4 @@
-# Cleanrooom ELN
+# Cleanroom ELN
  A Template for https://github.com/doug-101/TreeLine
  
  This template for TreeLine helps you organize a process database with a specific eye to R&D in microfabrication and material science (but adaptable to any other area).
@@ -8,7 +8,7 @@
 * Easily adaptable to different cases of use.
 * Completely file based, your data are always with you.
 * A workflow completely based on open source, multi-platform software.
-* No need for paying or hosting a web service.
+* No need for paying or hosting a web service (although a central storage server could help).
 	
 ![User Interface](Pictures/Screen.png)
 
