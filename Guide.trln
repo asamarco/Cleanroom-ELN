@@ -1150,7 +1150,7 @@
 "formatname": "P_IBE",
 "icon": "minus",
 "outputlines": [
-"<b>{*Date*}</b> Ion Beam Etching ({*IBEEnergy*} V,{*IBECurrent*} mA) at angle {*IBEAngle*} for {*IBETime*}."
+"<b>{*Date*}</b> Ion Beam Etching ({*IBEEnergy*},{*IBECurrent*}) at angle {*IBEAngle*} for {*IBETime*}."
 ],
 "titleline": "Ion Beam Etching"
 },
