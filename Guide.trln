@@ -99,15 +99,16 @@
 {
 "fieldname": "BAKRate",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#.##",
+"suffix": " nm/s"
 }
 ],
 "formathtml": true,
 "formatname": "D_BAK640Metal",
 "outputlines": [
 "Material:{*BAKMaterial*}",
-"thickness:{*BAKThickness*}",
-"rate (nm/s):{*BAKRate*}"
+"Thickness:{*BAKThickness*}",
+"Rate:{*BAKRate*}"
 ],
 "spacebetween": false,
 "tables": true,
@@ -128,7 +129,8 @@
 {
 "fieldname": "BAKRate",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#.##",
+"suffix": " nm/s"
 }
 ],
 "formathtml": true,
@@ -137,8 +139,8 @@
 "icon": "bullet_2",
 "outputlines": [
 "Material:{*BAKMaterial*}",
-"thickness:{*BAKThickness*}",
-"rate (nm/s):{*BAKRate*}"
+"Thickness:{*BAKThickness*}",
+"Rate (nm/s):{*BAKRate*}"
 ],
 "spacebetween": false,
 "tables": true,
@@ -159,7 +161,8 @@
 {
 "fieldname": "BAKRate",
 "fieldtype": "Number",
-"format": "#.##"
+"format": "#.##",
+"suffix": "nm/s"
 }
 ],
 "formathtml": true,
@@ -168,8 +171,8 @@
 "icon": "bullet_1",
 "outputlines": [
 "Material:{*BAKMaterial*}",
-"thickness:{*BAKThickness*}",
-"rate (nm/s):{*BAKRate*}"
+"Thickness:{*BAKThickness*}",
+"Rate:{*BAKRate*}"
 ],
 "spacebetween": false,
 "tables": true,
@@ -1110,6 +1113,29 @@
 "titleline": "{*DicingType*} dicing"
 },
 {
+"fields": [
+{
+"fieldname": "Date",
+"fieldtype": "Date",
+"format": "%-d/%-m/%y",
+"init": "Now"
+},
+{
+"fieldname": "Pressure",
+"fieldtype": "Number",
+"format": "#.##",
+"suffix": " MPa"
+}
+],
+"formathtml": true,
+"formatname": "P_HighPressureCleaning",
+"icon": "water",
+"outputlines": [
+"<b>{*Date*}</b> High pressure cleaning at {*Pressure*}"
+],
+"titleline": "HPC ({*Pressure*})"
+},
+{
 "childTypeLimit": [
 "G_Note"
 ],
@@ -1310,6 +1336,7 @@
 "P_Annealing",
 "P_Deposition",
 "P_Dicing",
+"P_HighPressureCleaning",
 "P_IBE",
 "P_LiftOff",
 "P_Lithography",
@@ -1347,6 +1374,7 @@
 "P_Annealing",
 "P_Deposition",
 "P_Dicing",
+"P_HighPressureCleaning",
 "P_IBE",
 "P_LiftOff",
 "P_Lithography",
@@ -1540,6 +1568,7 @@
 "d3f3cfe8b55511ed9ed9d319a877bc10",
 "d3f3cfe7b55511ed9fedd319a877bc10",
 "d3c9b6bdb53b11edb12fd319a877bc10",
+"b4e43761fe4811edab29c9d9d15ef1e5",
 "c9ac97c0b5e511ed9e78d319a877bc10",
 "aa17a3e8cc8c11eda86a309c23d25aa5",
 "e0a5236eb53411ed88a9d319a877bc10",
@@ -2167,6 +2196,15 @@
 },
 "format": "C_Samples",
 "uid": "b4026def878b11edb00fc7f3b7147ef6"
+},
+{
+"children": [],
+"data": {
+"Date": "2023-05-29",
+"Pressure": "12"
+},
+"format": "P_HighPressureCleaning",
+"uid": "b4e43761fe4811edab29c9d9d15ef1e5"
 },
 {
 "children": [
